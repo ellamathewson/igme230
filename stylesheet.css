@@ -9,22 +9,29 @@ h1, h2, h3, p {
 }
 
 /* Contains all the content to be centered on the page with a slight
-border on both sides. The border is for debugging purposes */
+border on both sides. */
 .mainContainer {
-    border: 2px solid green;
     width: 90%;
     margin-left: 5%;
     clear: both;
 }
 
 /* Sets the sidebar so it is only on the left side of the page. 
-    Border is used for testing purposes, will be removed later */
+    The height is set so the border will run down the length of 
+    the page, dividing the sidebar from the content */
 #sidebar {
-    border: 2px solid purple;
     width: 25%;
     margin: 3em 1em;
+    height: 85%;
+    padding-right: 1%;
     display: block;
     position: fixed;
+    border-right: 1px solid black;
+}
+
+/*Changes color of name on sidebar */
+#name {
+    color: #9FCEF0;
 }
 
 /* Centers the profile image on sidebar */
@@ -37,7 +44,6 @@ so the sidebar can be on the left. Has a slight margin on the top so
 it is aligned with the sidebar */
 .projectsDiv {
     width: 65%;
-    border: 1px solid black;
     display: block;
     float: right;
     margin-top: 3.5%;
@@ -50,22 +56,25 @@ so the size can adapt depending on how much is typed.*/
 .projects {
     margin: 10% 5%;
     padding: 2em 0;
-    height: 200px;
-    border: 2px solid pink;
+    height: 110px;
     clear: both;
+    background-color: #9FCEF0;
 }
 
 /*Class for the project title. Floats on the right so the image can
 be on the left. Margins are used to space it to align with the image.
-Along with this, it has a set width. */
+Along with this, it has a set width. Margin-bottom is used to get
+the projectPara closer to the header.*/
 .projectHeader {
     float: right;
+    font-size: 25px;
     margin-right: 15%;
     margin-top: 0.25em;
-    border: 1px solid teal;
+    margin-bottom: 0.25em;
     width: 70%;
     text-align: left;
     clear: both;
+    color: white;
 }
 
 /*Class for preview images of projects. Floats on the left; padding
@@ -74,12 +83,14 @@ used so it would have space. */
     display: block;
     float: left;
     padding: 5px 5px;
+    padding-left: 10px;
 }
 
 /*Class for the description of projects. Like the header, it's aligned
-to the left so it can fit beside the image. */
+to the left so it can fit beside the image. Margin-top is used to it will
+be closer to projectHeader */
 .projectPara {
-    border: 1px solid red;
+    font-size: 15px;
     text-align: left;
     float: right;
     margin-right: 15%;
