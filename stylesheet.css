@@ -1,3 +1,25 @@
-h1, h3 {
-    font-family: Arial, Helvetica, sans-serif;
+/* Imports a font face from google fonts (fonts.google.com)*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+
+/* Changes the font family of all written content on the site */
+h1, h3, p {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+.mainContainer {
+    border: 2px solid green;
+    width: 90%;
+    margin-left: 5%;
+    clear: both;
+}
+
+/* Sets the sidebar so it is only on the left side of the page. 
+    Border is used for testing purposes, will be removed later*/
+#sidebar {
+    border: 2px solid purple;
+    width: 25%;
+    margin: 3em 2em;
+    display: block;
 }
