@@ -8,6 +8,7 @@ h1, h3, p {
     text-align: center;
 }
 
+
 .mainContainer {
     border: 2px solid green;
     width: 90%;
@@ -20,6 +21,43 @@ h1, h3, p {
 #sidebar {
     border: 2px solid purple;
     width: 25%;
-    margin: 3em 2em;
+    margin: 3em 1em;
     display: block;
+    position: fixed;
+}
+
+#sidebarImg {
+    padding: 0 17%;
+}
+
+.projectsDiv {
+    width: 60%;
+    border: 1px solid black;
+    display: block;
+    float: right;
+    margin-top: 5%;
+    clear: both;
+}
+
+.projects {
+    margin: 10% 5%;
+    border: 2px solid pink;
+    clear: both;
+}
+
+.projectHeader {
+    margin: 0 auto;
+    float: right;
+    margin-right: 40%;
+    border: 1px solid teal;
+    width: 40%;
+    padding: 0 0.5em;
+    clear: both;
+}
+
+.projectPic {
+    display: block;
+    float: left;
+    padding: 5% 0;
+
 }
