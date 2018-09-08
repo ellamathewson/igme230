@@ -8,7 +8,8 @@ h1, h2, h3, p {
     text-align: center;
 }
 
-
+/* Contains all the content to be centered on the page with a slight
+border on both sides. The border is for debugging purposes */
 .mainContainer {
     border: 2px solid green;
     width: 90%;
@@ -17,7 +18,7 @@ h1, h2, h3, p {
 }
 
 /* Sets the sidebar so it is only on the left side of the page. 
-    Border is used for testing purposes, will be removed later*/
+    Border is used for testing purposes, will be removed later */
 #sidebar {
     border: 2px solid purple;
     width: 25%;
@@ -26,27 +27,37 @@ h1, h2, h3, p {
     position: fixed;
 }
 
+/* Centers the profile image on sidebar */
 #sidebarImg {
     padding: 0 17%;
 }
 
+/*Container for all projects. Floats on the right side of the page
+so the sidebar can be on the left. Has a slight margin on the top so
+it is aligned with the sidebar */
 .projectsDiv {
     width: 65%;
     border: 1px solid black;
     display: block;
     float: right;
-    margin-top: 5%;
+    margin-top: 3.5%;
     clear: both;
 }
 
+/*Container for individial projects. Margin and padding used to space
+them out on the page. Has a set height for right now, needs to be changed
+so the size can adapt depending on how much is typed.*/
 .projects {
     margin: 10% 5%;
     padding: 2em 0;
-    height: 110px;
+    height: 200px;
     border: 2px solid pink;
     clear: both;
 }
 
+/*Class for the project title. Floats on the right so the image can
+be on the left. Margins are used to space it to align with the image.
+Along with this, it has a set width. */
 .projectHeader {
     float: right;
     margin-right: 15%;
@@ -57,12 +68,16 @@ h1, h2, h3, p {
     clear: both;
 }
 
+/*Class for preview images of projects. Floats on the left; padding
+used so it would have space. */
 .projectPic {
     display: block;
     float: left;
     padding: 5px 5px;
 }
 
+/*Class for the description of projects. Like the header, it's aligned
+to the left so it can fit beside the image. */
 .projectPara {
     border: 1px solid red;
     text-align: left;
