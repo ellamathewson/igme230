@@ -3,7 +3,7 @@
 
 
 /* Changes the font family of all written content on the site */
-h1, h3, p {
+h1, h2, h3, p {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
 }
@@ -31,7 +31,7 @@ h1, h3, p {
 }
 
 .projectsDiv {
-    width: 60%;
+    width: 65%;
     border: 1px solid black;
     display: block;
     float: right;
@@ -41,23 +41,33 @@ h1, h3, p {
 
 .projects {
     margin: 10% 5%;
+    padding: 2em 0;
+    height: 110px;
     border: 2px solid pink;
     clear: both;
 }
 
 .projectHeader {
-    margin: 0 auto;
     float: right;
-    margin-right: 40%;
+    margin-right: 15%;
+    margin-top: 0.25em;
     border: 1px solid teal;
-    width: 40%;
-    padding: 0 0.5em;
+    width: 70%;
+    text-align: left;
     clear: both;
 }
 
 .projectPic {
     display: block;
     float: left;
-    padding: 5% 0;
+    padding: 5px 5px;
+}
 
+.projectPara {
+    border: 1px solid red;
+    text-align: left;
+    float: right;
+    margin-right: 15%;
+    margin-top: 0;
+    width: 70%;
 }
