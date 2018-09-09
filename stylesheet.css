@@ -8,6 +8,13 @@ h1, h2, h3, p {
     text-align: center;
 }
 
+a {
+    font-family: 'Noto Sans', 'sans-serif';
+    color: white;
+    
+}
+
+
 /* Contains all the content to be centered on the page with a slight
 border on both sides. */
 .mainContainer {
@@ -29,6 +36,14 @@ border on both sides. */
     border-right: 1px solid black;
 }
 
+/* Aligns the p tag of content in the sidebar to match
+the width of the photo */
+#sidebarContent {
+    border: 1px solid black;
+    width: 68%;
+    margin-left: 17%;
+}
+
 /*Changes color of name on sidebar */
 #name {
     color: #9FCEF0;
@@ -39,15 +54,23 @@ border on both sides. */
     padding: 0 17%;
 }
 
+/* Changes the scroll bar on the right for the porjects. I found
+how to do this from w3schools:
+https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+*/
+/* ::-webkit-scrollbar {
+    width: 5px;
+} */
+
 /*Container for all projects. Floats on the right side of the page
 so the sidebar can be on the left. Has a slight margin on the top so
 it is aligned with the sidebar */
 .projectsDiv {
+    clear: both;
     width: 65%;
     display: block;
     float: right;
-    margin-top: 3.5%;
-    clear: both;
+    margin-top: -1%;
 }
 
 /*Container for individial projects. Margin and padding used to space
@@ -74,7 +97,6 @@ the projectPara closer to the header.*/
     width: 70%;
     text-align: left;
     clear: both;
-    color: white;
 }
 
 /*Class for preview images of projects. Floats on the left; padding
