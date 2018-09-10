@@ -20,7 +20,6 @@ border on both sides. */
 .mainContainer {
     width: 90%;
     margin-left: 5%;
-    clear: both;
 }
 
 /* Sets the sidebar so it is only on the left side of the page. 
@@ -29,6 +28,7 @@ border on both sides. */
 #sidebar {
     width: 25%;
     margin: 3em 1em;
+    padding-right: 50%;
     height: 85%;
     padding-right: 1%;
     display: block;
@@ -68,9 +68,9 @@ it is aligned with the sidebar */
 .projectsDiv {
     clear: both;
     width: 65%;
-    display: block;
-    float: right;
     margin-top: -1%;
+    margin-left: 35%;
+    display: inline-block;
 }
 
 /*Container for individial projects. Margin and padding used to space
@@ -79,7 +79,7 @@ so the size can adapt depending on how much is typed.*/
 .projects {
     margin: 10% 5%;
     padding: 2em 0;
-    height: 110px;
+    height: 65%;
     clear: both;
     background-color: #9FCEF0;
 }
@@ -91,9 +91,8 @@ the projectPara closer to the header.*/
 .projectHeader {
     float: right;
     font-size: 25px;
-    margin-right: 15%;
+    margin-right: 10%;
     margin-top: 0.25em;
-    margin-bottom: 0.25em;
     width: 70%;
     text-align: left;
     clear: both;
@@ -102,10 +101,7 @@ the projectPara closer to the header.*/
 /*Class for preview images of projects. Floats on the left; padding
 used so it would have space. */
 .projectPic {
-    display: block;
-    float: left;
-    padding: 5px 5px;
-    padding-left: 10px;
+    padding: 5px 15px;
 }
 
 /*Class for the description of projects. Like the header, it's aligned
@@ -115,7 +111,8 @@ be closer to projectHeader */
     font-size: 15px;
     text-align: left;
     float: right;
-    margin-right: 15%;
-    margin-top: 0;
+    position: relative;
+    margin-right: 10%;
+    margin-top: -8%;
     width: 70%;
 }
