@@ -66,22 +66,24 @@ https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
 so the sidebar can be on the left. Has a slight margin on the top so
 it is aligned with the sidebar */
 .projectsDiv {
-    clear: both;
-    width: 65%;
-    margin-top: -1%;
     margin-left: 35%;
-    display: inline-block;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /*Container for individial projects. Margin and padding used to space
 them out on the page. Has a set height for right now, needs to be changed
 so the size can adapt depending on how much is typed.*/
 .projects {
-    margin: 10% 5%;
-    padding: 2em 0;
-    height: 65%;
-    clear: both;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 80%;
+    align-items: left;
+    padding: 10px;
     background-color: #9FCEF0;
+    border: 4px solid white;
 }
 
 /*Class for the project title. Floats on the right so the image can
@@ -89,19 +91,15 @@ be on the left. Margins are used to space it to align with the image.
 Along with this, it has a set width. Margin-bottom is used to get
 the projectPara closer to the header.*/
 .projectHeader {
-    float: right;
     font-size: 25px;
-    margin-right: 10%;
-    margin-top: 0.25em;
-    width: 70%;
     text-align: left;
-    clear: both;
 }
 
 /*Class for preview images of projects. Floats on the left; padding
 used so it would have space. */
 .projectPic {
-    padding: 5px 15px;
+    float: left;
+    padding: 10px;
 }
 
 /*Class for the description of projects. Like the header, it's aligned
@@ -110,9 +108,4 @@ be closer to projectHeader */
 .projectPara {
     font-size: 15px;
     text-align: left;
-    float: right;
-    position: relative;
-    margin-right: 10%;
-    margin-top: -8%;
-    width: 70%;
 }
