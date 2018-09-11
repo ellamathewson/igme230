@@ -17,7 +17,15 @@ h1, h2, h3, p {
 */
 a {
     font-family: 'Noto Sans', 'sans-serif';
-    color: white;
+    text-decoration: none;
+}
+/* 
+    Accidently discovered this when playing around with the links.
+    When mouse hovers over the project, the padding will increase
+    to show to the user that there is a clickable link there
+*/
+a:hover {
+    padding: 3% 0;
 }
 
 /* 
@@ -106,13 +114,12 @@ a {
     display: flex;
     justify-content: flex-end;
     width: 800px;
-    margin: 0 auto;
     align-items: left;
     padding: 10px;
+    padding-bottom: 20px;
     background-color: #9FCEF0;
     flex-direction: column;
-    margin: 3% 0;
-
+    margin: 2% 0;
 }
 
 /*
@@ -126,6 +133,7 @@ a {
     width: 50%;
     position: relative;
     margin-left: 15%;
+    color: white;
 }
 
 /*
@@ -134,7 +142,7 @@ a {
     will not stretch or shrink when the page is moved 
 */
 .projectPic {
-    padding: 25px 10px;
+    padding: 10px 10px;
     width: 100px;
     height: 100px;
     position: absolute;
