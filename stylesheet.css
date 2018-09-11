@@ -1,30 +1,39 @@
-/* Imports a font face from google fonts (fonts.google.com)*/
+/* 
+    Imports a font face from google fonts (fonts.google.com)
+*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 
-/* Changes the font family of all written content on the site */
+/* 
+    Changes the font family of all written content on the site,
+    as well as aligning it center 
+*/
 h1, h2, h3, p {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
 }
-
+/* 
+    Changes font family, and also changes the color of links
+*/
 a {
     font-family: 'Noto Sans', 'sans-serif';
     color: white;
-    
 }
 
-
-/* Contains all the content to be centered on the page with a slight
-border on both sides. */
+/* 
+    Contains all the content to be centered on the page with a slight
+    margin on both sides. 
+*/
 .mainContainer {
     width: 90%;
     margin-left: 5%;
 }
 
-/* Sets the sidebar so it is only on the left side of the page. 
+/* 
+    Sets the sidebar so it is only on the left side of the page. 
     The height is set so the border will run down the length of 
-    the page, dividing the sidebar from the content */
+    the page, dividing the sidebar from the content 
+*/
 #sidebar {
     width: 25%;
     margin: 3em 1em;
@@ -32,40 +41,53 @@ border on both sides. */
     height: 85%;
     padding-right: 1%;
     display: block;
-    position: fixed;
+    position: absolute;
     border-right: 1px solid black;
 }
 
-/* Aligns the p tag of content in the sidebar to match
-the width of the photo */
+/* 
+    Aligns the p tag of content in the sidebar to match
+    the width of the photo 
+*/
 #sidebarContent {
     border: 1px solid black;
     width: 68%;
-    margin-left: 17%;
+    position: relative;
+    margin: 80% 20%;
 }
 
-/*Changes color of name on sidebar */
+/*
+    Changes color of name on sidebar 
+*/
 #name {
     color: #9FCEF0;
 }
 
-/* Centers the profile image on sidebar */
+/* 
+    Centers the profile image on sidebar 
+*/
 #sidebarImg {
     padding: 0 17%;
+    position: absolute;
 }
 
-/* Changes the scroll bar on the right for the porjects. I found
-how to do this from w3schools:
-https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+/* 
+    Changes the scroll bar on the right for the porjects. I found
+    how to do this from w3schools:
+    https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
 */
 /* ::-webkit-scrollbar {
     width: 5px;
 } */
 
-/*Container for all projects. Using display: flex, the project 
-items will be displayed in a column format, and are aligned 
-on the right. In this way it changes the direction of the 
-div */
+/*
+    Container for all projects. Using display: flex, the project 
+    items will be displayed in a column format, and are aligned 
+    on the right. In this way it changes the direction of the 
+    div.  I used the website 'Interneting is Hard' as refrence for 
+    using 'display: flex' in my CSS. The link is here: 
+    https://internetingishard.com/html-and-css/flexbox/
+*/
 .projectsDiv {
     margin-left: 35%;
     display: flex;
@@ -74,13 +96,17 @@ div */
     flex-direction: column;
 }
 
-/*Container for individial projects. I also used display: flex
-here to align the items inside the project div. The items are 
-aligned on the left, but will be further adjusted later*/
+/*
+    Container for individial projects. I also used display: flex
+    here to align the items inside the project div. The items are 
+    aligned on the left, but will be further adjusted later. The
+    widths of the projects are fixed at 800px.
+*/
 .projects {
     display: flex;
     justify-content: flex-end;
-    max-width: 90%;
+    width: 800px;
+    margin: 0 auto;
     align-items: left;
     padding: 10px;
     background-color: #9FCEF0;
@@ -89,26 +115,39 @@ aligned on the left, but will be further adjusted later*/
 
 }
 
-/*Class for the project title. Text aligned on the left*/
+/*
+    Class for the project title. Text aligned on the left. Position
+    is relative so it can be moved around on the page and be placed
+    next to the preview image 
+*/
 .projectHeader {
     font-size: 25px;
     text-align: left;
-    max-width: 50%;
+    width: 50%;
+    position: relative;
+    margin-left: 15%;
 }
 
-/*Class for preview images of projects. Floats on the left; padding
-used so it would have space. */
-/* .projectPic {
-    padding: 10px;
-    max-width: 100px;
-    max-height: 100px;
+/*
+    Class for preview images of projects. Floats on the left; padding
+    used so it would have space. Position is absolute so the image
+    will not stretch or shrink when the page is moved 
+*/
+.projectPic {
+    padding: 25px 10px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
     float: left;
-} */
+}
 
-/*Class for the description of projects. Like the header, it's aligned
-to the left so it can fit beside the image. */
+/*
+    Class for the description of projects. Like the header, it's aligned
+    to the left so it can fit beside the image.  
+*/
 .projectPara {
     font-size: 15px;
     text-align: left;
-    
+    position: relative;
+    margin-left: 15%;
 }
