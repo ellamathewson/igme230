@@ -62,9 +62,10 @@ https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
     width: 5px;
 } */
 
-/*Container for all projects. Floats on the right side of the page
-so the sidebar can be on the left. Has a slight margin on the top so
-it is aligned with the sidebar */
+/*Container for all projects. Using display: flex, the project 
+items will be displayed in a column format, and are aligned 
+on the right. In this way it changes the direction of the 
+div */
 .projectsDiv {
     margin-left: 35%;
     display: flex;
@@ -73,39 +74,41 @@ it is aligned with the sidebar */
     flex-direction: column;
 }
 
-/*Container for individial projects. Margin and padding used to space
-them out on the page. Has a set height for right now, needs to be changed
-so the size can adapt depending on how much is typed.*/
+/*Container for individial projects. I also used display: flex
+here to align the items inside the project div. The items are 
+aligned on the left, but will be further adjusted later*/
 .projects {
     display: flex;
     justify-content: flex-end;
-    max-width: 80%;
+    max-width: 90%;
     align-items: left;
     padding: 10px;
     background-color: #9FCEF0;
-    border: 4px solid white;
+    flex-direction: column;
+    margin: 3% 0;
+
 }
 
-/*Class for the project title. Floats on the right so the image can
-be on the left. Margins are used to space it to align with the image.
-Along with this, it has a set width. Margin-bottom is used to get
-the projectPara closer to the header.*/
+/*Class for the project title. Text aligned on the left*/
 .projectHeader {
     font-size: 25px;
     text-align: left;
+    max-width: 50%;
 }
 
 /*Class for preview images of projects. Floats on the left; padding
 used so it would have space. */
-.projectPic {
-    float: left;
+/* .projectPic {
     padding: 10px;
-}
+    max-width: 100px;
+    max-height: 100px;
+    float: left;
+} */
 
 /*Class for the description of projects. Like the header, it's aligned
-to the left so it can fit beside the image. Margin-top is used to it will
-be closer to projectHeader */
+to the left so it can fit beside the image. */
 .projectPara {
     font-size: 15px;
     text-align: left;
+    
 }
