@@ -45,21 +45,31 @@ a:active {
     the page, dividing the sidebar from the content 
 */
 #sidebar {
-    width: 25%;
-    margin: 3em 1em;
-    padding-right: 50%;
-    height: 85%;
-    padding-right: 1%;
-    display: block;
-    position: absolute;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 400px;
+    position: fixed;
     border: 1px solid black;
-    /* border-right: 1px solid black; */
 }
 
-/* 
-    Aligns the p tag of content in the sidebar to match
-    the width of the photo 
-*/
+/* Changes color of name on sidebar */
+#name {
+    color: #9FCEF0;
+}
+
+/* Centers the profile image on sidebar */
+#sidebarImg {
+    position: absolute;
+    float: center;
+    margin-top: -40%;
+    padding-left: 20%;
+}
+
+/* Aligns the p tag of content in the sidebar to match
+    the width of the photo */
 #sidebarContent {
     border: 1px solid black;
     width: 68%;
@@ -67,20 +77,13 @@ a:active {
     margin: 90% 20%;
 }
 
-/*
-    Changes color of name on sidebar 
-*/
-#name {
-    color: #9FCEF0;
-}
 
-/* 
-    Centers the profile image on sidebar 
-*/
-#sidebarImg {
-    padding: 0 17%;
-    position: absolute;
-}
+
+
+/* CSS FOR MAIN CONTENT ON PAGE */
+
+
+
 
 /*
     Container for all projects. Using display: flex, the project 
@@ -141,20 +144,6 @@ a:active {
     margin-left: 15%;
     color: white;
 }
-
-/*
-    Class for preview images of projects. Floats on the left; padding
-    used so it would have space. Position is absolute so the image
-    will not stretch or shrink when the page is moved 
-*/
-/* .projectPic {
-    padding: 10px 10px;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    float: left;
-} */
-
 
 /* 
     Class for the date, which is displayed on the left of the project
