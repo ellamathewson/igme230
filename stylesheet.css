@@ -18,6 +18,16 @@ h1, h2, h3, p {
 a {
     font-family: 'Noto Sans', 'sans-serif';
     text-decoration: none;
+    color: black;
+}
+
+/*
+    When clicking on the link to project, the paragraph font
+    color was turning red. This fixes that issue by turning the color white
+    when clicked on
+*/
+a:active {
+    color: white;
 }
 
 /* 
@@ -42,7 +52,8 @@ a {
     padding-right: 1%;
     display: block;
     position: absolute;
-    border-right: 1px solid black;
+    border: 1px solid black;
+    /* border-right: 1px solid black; */
 }
 
 /* 
@@ -53,7 +64,7 @@ a {
     border: 1px solid black;
     width: 68%;
     position: relative;
-    margin: 80% 20%;
+    margin: 90% 20%;
 }
 
 /*
@@ -136,12 +147,29 @@ a {
     used so it would have space. Position is absolute so the image
     will not stretch or shrink when the page is moved 
 */
-.projectPic {
+/* .projectPic {
     padding: 10px 10px;
     width: 100px;
     height: 100px;
     position: absolute;
     float: left;
+} */
+
+
+/* 
+    Class for the date, which is displayed on the left of the project
+    div. Floats on the left and has a bit of space between it and the 
+    header, which it is aligned with. Getting rid of the text decoration
+    gets rid of the bold to make sure the title is more clearly visable
+*/
+.date {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 10px;
+    position: absolute;
+    float: left;
+    color: #4B6170;
+    margin-top: 1%;
 }
 
 /*
