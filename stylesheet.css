@@ -1,63 +1,56 @@
-/* 
-    Imports a font face from google fonts (fonts.google.com)
-*/
+/* Imports a font face from google fonts (fonts.google.com) */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 
-/* 
-    Changes the font family of all written content on the site,
-    as well as aligning it center 
-*/
+/* Changes the font family of all written content on the site,
+    as well as aligning it center */
 h1, h2, h3, p {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
 }
-/* 
-    Changes font family, and also changes the color of links
-*/
+/* Changes font family, and also changes the color of links */
 a {
     font-family: 'Noto Sans', 'sans-serif';
     text-decoration: none;
     color: black;
 }
 
-/*
-    When clicking on the link to project, the paragraph font
+/*  When clicking on the link to project, the paragraph font
     color was turning red. This fixes that issue by turning the color white
-    when clicked on
-*/
+    when clicked on */
 a:active {
     color: white;
 }
 
-/* 
-    Contains all the content to be centered on the page with a slight
-    margin on both sides. 
-*/
+/*  Contains all the content to be centered on the page with a slight
+    margin on both sides. */
 .mainContainer {
     width: 90%;
     margin-left: 5%;
 }
 
-/* 
-    Sets the sidebar so it is only on the left side of the page. 
-    The height is set so the border will run down the length of 
-    the page, dividing the sidebar from the content 
-*/
-#sidebar {
+/*  Sets the sidebar so it is only on the left side of the page. 
+    The items in the container are centered, and they are aligned
+    in a column. The position is fixed so it will stay still as
+    you scroll down the page. It also has a set width.
+
+    I used the website 'Interneting is Hard' as refrence for 
+    using 'display: flex' throughout the entire page. The link is here: 
+    https://internetingishard.com/html-and-css/flexbox/ */
+aside {
     display: flex;
-    align-items: right;
+    margin-top: 5%;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    width: 400px;
+    width: 350px;
     position: fixed;
-    border: 1px solid black;
 }
 
 /* Changes color of name on sidebar */
 #name {
     color: #9FCEF0;
+    font-size: 35px;
 }
 
 /* Centers the profile image on sidebar */
@@ -65,13 +58,11 @@ a:active {
     position: absolute;
     float: center;
     margin-top: -40%;
-    padding-left: 20%;
 }
 
 /* Aligns the p tag of content in the sidebar to match
     the width of the photo */
 #sidebarContent {
-    border: 1px solid black;
     width: 68%;
     position: relative;
     margin: 90% 20%;
@@ -89,9 +80,7 @@ a:active {
     Container for all projects. Using display: flex, the project 
     items will be displayed in a column format, and are aligned 
     on the right. In this way it changes the direction of the 
-    div.  I used the website 'Interneting is Hard' as refrence for 
-    using 'display: flex' in my CSS. The link is here: 
-    https://internetingishard.com/html-and-css/flexbox/
+    div.
 */
 .projectsDiv {
     margin-left: 35%;
@@ -107,7 +96,7 @@ a:active {
     aligned on the left, but will be further adjusted later. The
     widths of the projects are fixed at 800px.
 */
-.projects {
+article {
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -117,6 +106,7 @@ a:active {
     background-color: #9FCEF0;
     flex-direction: column;
     margin: 2% 0;
+    
 }
 
 /* 
@@ -125,8 +115,8 @@ a:active {
     to show to the user that there is a clickable link there. 
     Also included a change in background color
 */
-.projects:hover {
-    background-color: #58B2F2;
+article:hover {
+    background-color: #A8F8CD;
     padding-top: 20px;
     padding-bottom: 30px;
 }
