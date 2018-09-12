@@ -1,3 +1,7 @@
+
+/* CSS FOR ENTIRE PAGE */
+
+
 /* Imports a font face from google fonts (fonts.google.com) */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
@@ -8,7 +12,9 @@ h1, h2, h3, p {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
 }
-/* Changes font family, and also changes the color of links */
+/* Changes font family, and also changes the color of links, which
+    affects the paragraphs of the project descriptions. Also gets
+    rid of the underline */
 a {
     font-family: 'Noto Sans', 'sans-serif';
     text-decoration: none;
@@ -29,13 +35,24 @@ a:active {
     margin-left: 5%;
 }
 
+
+
+
+/* CSS FOR SIDEBAR */
+
+
+
+
 /*  Sets the sidebar so it is only on the left side of the page. 
     The items in the container are centered, and they are aligned
     in a column. The position is fixed so it will stay still as
     you scroll down the page. It also has a set width.
 
-    I used the website 'Interneting is Hard' as refrence for 
-    using 'display: flex' throughout the entire page. The link is here: 
+    I also used flex display in this class as well as others.
+    I used the website 'Interneting is Hard' as a refrence
+    for coding this. I didn't know of it before, but when I 
+    learned about flex display, the code was exactly what I wanted my 
+    website to do. The link is here: 
     https://internetingishard.com/html-and-css/flexbox/ */
 aside {
     display: flex;
@@ -47,21 +64,23 @@ aside {
     position: fixed;
 }
 
-/* Changes color of name on sidebar */
+/* Changes color of my name on the sidebar. Used
+    ID because there is only one sidebar on the page */
 #name {
     color: #9FCEF0;
     font-size: 35px;
 }
 
-/* Centers the profile image on sidebar */
+/* Centers the profile image on sidebar. The position also
+    makes it so the photo won't resize when the page
+    size changes */
 #sidebarImg {
     position: absolute;
-    float: center;
     margin-top: -40%;
 }
 
-/* Aligns the p tag of content in the sidebar to match
-    the width of the photo */
+/* Aligns the small paragraph in sidebar to be 
+    aligned with the image */
 #sidebarContent {
     width: 68%;
     position: relative;
@@ -71,36 +90,29 @@ aside {
 
 
 
-/* CSS FOR MAIN CONTENT ON PAGE */
+/* CSS FOR MAIN CONTENT ON PAGE, THE PROJECTS */
 
 
 
 
-/*
-    Container for all projects. Using display: flex, the project 
-    items will be displayed in a column format, and are aligned 
-    on the right. In this way it changes the direction of the 
-    div.
-*/
+/*  Container for all projects. Using display: flex, the project 
+    items will be displayed in a column format, and are centered.
+    Margin accounts for the sidebar that's also on the page. */
 .projectsDiv {
     margin-left: 35%;
     display: flex;
-    align-items: right;
     justify-content: center;
     flex-direction: column;
 }
 
-/*
-    Container for individial projects. I also used display: flex
+/*  Container for individial projects. I also used display: flex
     here to align the items inside the project div. The items are 
     aligned on the left, but will be further adjusted later. The
-    widths of the projects are fixed at 800px.
-*/
+    widths of the projects are fixed. */
 article {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    align-items: left;
     padding: 10px 10px;
     padding-bottom: 20px;
     background-color: #9FCEF0;
@@ -109,23 +121,19 @@ article {
     
 }
 
-/* 
-    Accidently discovered this when playing around with the a tag.
+/*  Accidently discovered this effect when playing around with the a tag.
     When mouse hovers over the project, the padding will increase
     to show to the user that there is a clickable link there. 
-    Also included a change in background color
-*/
+    Also included a change in background color. */
 article:hover {
     background-color: #A8F8CD;
     padding-top: 20px;
     padding-bottom: 30px;
 }
 
-/*
-    Class for the project title. Text aligned on the left. Position
+/*  Class for the project title. Text aligned on the left. Position
     is relative so it can be moved around on the page and be placed
-    next to the preview image 
-*/
+    next to the date */
 .projectHeader {
     font-size: 25px;
     text-align: left;
@@ -135,12 +143,10 @@ article:hover {
     color: white;
 }
 
-/* 
-    Class for the date, which is displayed on the left of the project
+/*  Class for the date, which is displayed on the left of the project
     div. Floats on the left and has a bit of space between it and the 
     header, which it is aligned with. Getting rid of the text decoration
-    gets rid of the bold to make sure the title is more clearly visable
-*/
+    gets rid of the bold to make sure the title is more clearly visable */
 .date {
     font-size: 20px;
     text-decoration: none;
@@ -151,10 +157,8 @@ article:hover {
     margin-top: 1%;
 }
 
-/*
-    Class for the description of projects. Like the header, it's aligned
-    to the left so it can fit beside the image.  
-*/
+/*  Class for the description of projects. Like the header, it's aligned
+    to the left so it can fit beside the image. */
 .projectPara {
     font-size: 15px;
     text-align: left;
