@@ -82,10 +82,15 @@ aside {
 /* Aligns the small paragraph in sidebar to be 
     aligned with the image */
 #sidebarContent {
+    margin-top: -50px;
     width: 68%;
     position: relative;
     margin: 90% 20%;
+
 }
+
+
+
 
 
 
