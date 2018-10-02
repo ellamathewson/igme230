@@ -113,17 +113,23 @@ aside {
 /*  Container for individial projects. I also used display: flex
     here to align the items inside the project div. The items are 
     aligned on the left, but will be further adjusted later. The
-    widths of the projects are fixed. */
+    widths of the projects are set so it will not expand as the
+    webpage grows. */
 article {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    max-width: 100%;
     padding: 10px 10px;
     padding-bottom: 20px;
     background-color: #9FCEF0;
     flex-direction: column;
     margin: 2% 0;
-    
+    line-height: 1.5;
+}
+
+.intextLink {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 /*  Accidently discovered this effect when playing around with the a tag.
@@ -169,4 +175,11 @@ article:hover {
     text-align: left;
     position: relative;
     margin-left: 15%;
+}
+
+/* These next two sections of CSS code are used to show the differences
+between projects and exercises. The article tags with the classProject
+tags will have a slightly different background color. */
+.classProject {
+    background-color: #6D9EC2;
 }
