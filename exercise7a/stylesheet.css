@@ -1,0 +1,56 @@
+form {
+    /*Center form on page */
+    margin: 0 auto;
+    width: 40px;
+
+    /* Border around the form */
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /* All labels have the same size and are aligned */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    /* All fields have same font settings */
+    font: 1em sans-serif;
+
+    /* Same size to all text fields */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Border to fields*/
+    border: 1px solid lightblue;
+}
+
+input:focus, textarea:focus {
+    /* Gives a little highlight on active elements*/
+    border-color: #000;
+}
+
+textarea {
+    /* Aligns multiline text fields with their labels*/
+    vertical-align: top;
+
+    /* Gives room to type some text*/
+    height: 5em;
+}
+
+.button {
+    /* Aligns button with text fields*/
+    padding-left: 90px;
+}
+
+button {
+    /* Spaces out button to align with label and text fields*/
+    margin-left: .5em;
+}
