@@ -125,6 +125,7 @@ article {
     flex-direction: column;
     margin: 2% 0;
     line-height: 1.5;
+    transition: all .2s ease-in-out;
 }
 
 .intextLink {
@@ -135,11 +136,19 @@ article {
 /*  Accidently discovered this effect when playing around with the a tag.
     When mouse hovers over the project, the padding will increase
     to show to the user that there is a clickable link there. 
-    Also included a change in background color. */
+    Also included a change in background color. 
 article:hover {
     background-color: #A8F8CD;
     padding-top: 20px;
     padding-bottom: 30px;
+} */
+
+/*  In place of the commented code above, I changed the hover animation so it was a CSS transistion.
+    This code came from the Week 8 CSS Animation Exercise, linked here:
+    https://lawleyfall2018.github.io/230-fall2018/weekly_materials/week8/cssAnimationExercise.html
+*/
+article:hover {
+    transform: scale(1.1);
 }
 
 /*  Class for the project title. Text aligned on the left. Position
