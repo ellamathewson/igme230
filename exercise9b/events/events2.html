@@ -46,6 +46,10 @@
         // 4 - use the .onclick event to call the divClicked function
 
         div.onclick = divClicked;
+        //div.onclick = divClicked(); -- does not work
+        // div does not become target, but function becomes target for the click
+        // can't click on the function
+        //don't put () in when calling as event 
     </script>
 
 </body>
