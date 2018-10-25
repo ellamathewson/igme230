@@ -23,7 +23,12 @@
 
         // 2 - by checking the value of b before using it, we can give it a default value 
         function multiply2(a, b) {
-            b = (typeof b !== 'undefined') ? b : 1; // ternary operator
+            /*  
+                *looks at b, single line (condition ? trueThen: falseElse)
+                * if type of element b is not undefined, then b stays b. If it is undefined (no value
+                  passed in, b becomes 1)
+            */
+            b = (typeof b !== 'undefined') ? b : 1; // ternary operator; reduces code from if else statement
             return a * b;
         }
 
@@ -32,6 +37,7 @@
 
 
         // 3 - this is much easier with ES6 default parameters
+        //if there's no b being passed in, make it a one
         function multiply3(a, b = 1) {
             return a * b;
         }
