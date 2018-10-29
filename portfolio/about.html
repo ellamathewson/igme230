@@ -20,15 +20,20 @@
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
             <a class="navLink" href="https://google.com" class="link" id="proj">Projects</a>
-            <a class="navLink" href="https://google.com" class="link">About</a>
+            <a class="navLink" href="https://google.com" class="link" id="about">About</a>
             <a class="navLink" href="https://google.com" class="link">Resume</a>
             <a class="navLink" href="https://google.com" class="link">Contact</a>
         </nav>
 
+        <br><br>
+
+    <div class="sideBySide">
         <img class="aboutImg" src="media/aboutPic1.jpg">
-        <p>Hello, I'm a second year student studying at Rochester Institute of Technology, where I'm 
+        <p class="aboutPara">Hello, I'm a second year student studying at Rochester Institute of Technology, where I'm 
             majoring in New Media Interactive Development. I'm able to code in JavaScript, HTML, CSS, 
             and C#. Along with this, I am well versed in Adobe Illustrator, Photoshop, and InDesign.
+
+            <br><br>
 
             During my time at RIT, I have taken classes such as Digital Survey 1 and 2, as well as 
             Interactive Design and Algebra Problem Solving 1 and 2, which have taught me in-depth 
@@ -37,12 +42,15 @@
             for Women in Computing club at RIT, as well as an interactive web game called Boogie 
             Worms.
 
+            <br><br>
+
             I love overcoming challenges and finding solutions to problems, which is why I am always
             looking for new projects to work on. 
         </p>
+    </div>
 
-        <img class="aboutImg" src="media/aboutPic2.jpg">
-        <p>
+    <div class="sideBySide">
+        <p class="aboutPara">
             Outside of academics, I play tennis through the RIT Tennis Club, which I also 
             help run as vice-president. I'm also a member of a volunteer organization called Momentum, 
             where I learn leadership skills as well as volunteer in the Rochester community. 
@@ -50,7 +58,8 @@
             Currently I work as a Teaching Assistant in the IGM departmnet, grading for two introductory
             JavaScript courses.
         </p>
-
+        <img class="aboutImg" src="media/aboutPic2.jpg">
+    </div>
 
 
     </div>
@@ -63,6 +72,18 @@
                 Ella Mathewson</a></p>
     </footer>
     </div>
+
+    <script>
+    
+    onPage();
+        
+        function onPage() {
+            let currentPage = document.getElementById("about");
+            currentPage.style.backgroundColor = "#0C6B3B"
+            currentPage.style.color = "white";
+        }
+
+    </script>
 
 </body>
 
