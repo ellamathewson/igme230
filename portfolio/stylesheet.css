@@ -141,16 +141,20 @@ footer > a {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* */
 .projImg {
     width: 300px;
     margin: 2% 2%;
-    border: 1px solid gray;
-    height: 0;
-    overflow: hidden;
-    animation: entrance 1s ease 1s forwards;
 }
 
-@keyframes entrance {
-    from{height: 0;}
-    to {height: 300px;}
+/* Suddle growing for hovering over images on projects page*/
+.projImg:hover {
+    transform: scale(1.1);
+}
+
+.imgLink {
+    margin: 0;
+    padding: 0 20px;
+
 }

@@ -36,11 +36,11 @@
 
         <div class="projectsGrid">
 
-            <img class="projImg" src="media/alumniLogo.png">
-            <img class="projImg" src="media/boogieLogo.png">
-            <img class="projImg" src="media/huegridLogo.png">
-            <img class="projImg" src="media/wearableLogo.png">
-            <img class="projImg" src="media/wearableLogo.png">
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/alumniLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/boogieLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/huegridLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/wearableLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/wearableLogo.png"></a>
 
         </div>
 
@@ -55,6 +55,21 @@
 
     <script>
         onPage();
+        loadProjects();
+
+        //let projectImages = document.getElementsByTagName("img");
+
+        function loadProjects() {
+            /* This line of code came from Darius Morawiec on Stack Overflow:
+                https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag
+             */
+             let images = document.getElementsByTagName("img");
+             let imgArray = [];
+             for (let i = 0; i < images.Length; i++){
+                imgArray.push(document.getElementsByTagName("img"));
+                //imgArray[i].style.opactiy = 1;
+                }
+        }
 
         function onPage() {
             let currentPage = document.getElementById("proj");
@@ -66,3 +81,19 @@
 </body>
 
 </html>
+
+
+<!--
+
+    
+        function loadProjects() {
+            /* This line of code came from Darius Morawiec on Stack Overflow:
+                https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag
+             */
+            //let numImages = document.getElementById("projectsGrid").getElementsByTagName("img").length;
+            //for (let i = 0; i < numImages; i++){
+                
+            //}
+        }
+
+-->
