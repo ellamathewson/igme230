@@ -78,6 +78,10 @@ h3 {
     color: black;
 }
 
+.slideShow {
+    display: none;
+}
+
 
 /* Width, margin, and padding are the same here as the nav bar*/
 footer {

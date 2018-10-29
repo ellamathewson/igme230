@@ -44,7 +44,9 @@
             in difficulty and the challenges change every 5 levels. 
         </p>
 
-        <img src="media/boogielogoResized.jpg">
+        <img class="slideShow" src="media/boogielogoResized.jpg">
+        <img class="slideShow" src="media/boogieLevel1.PNG">
+        <img class="slideShow" src="media/boogieLevel2.PNG">
 
     </article>
 <!--
@@ -61,6 +63,33 @@
                 aria-hidden="true"></i> Ella Mathewson</a></p>
         </footer>
     </div>
-</body>
 
+    <script>
+        /* Code based off of tutorial on w3 Schools:
+        https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr
+        */
+            var myIndex = 0;
+            slideshow();
+            
+            function slideshow() {
+                //grabs the slideshow from HTML
+                var images = document.getElementsByClassName("slideShow");
+                //loop to remove the images from the HTML
+                for (let i = 0; i < x.length; i++) {
+                   images[i].style.display = "none";  
+                }
+                //increases variable
+                myIndex++;
+                //if variable is greater than number of images, resets slideshow to beginning
+                if (myIndex > images.length) {
+                    myIndex = 1
+                }    
+                //sets the display of the current image to block, shows image on screen
+                images[myIndex-1].style.display = "block";  
+                //Changes image every 3 seconds
+                setTimeout(carousel, 3000); 
+            }
+            </script>
+
+</body>
 </html>
