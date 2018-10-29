@@ -9,6 +9,7 @@
     width: 90%;
     margin: 0 5%;
     font-family: 'Mako', sans-serif;
+    font-size: 18px;
 }
 
 nav {
@@ -247,4 +248,9 @@ hr {
 #alumni {
     width: 85%;
     margin-left: 7.5%;
+}
+
+.underneathPara {
+    width: 50%;
+    margin-left: 30%;
 }
