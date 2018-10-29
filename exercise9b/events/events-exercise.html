@@ -1,47 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8" />
 	<title>Events Exercise</title>
 	<style>
-           @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+		@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
 
 		html {
-			font-family:Lato, sans-serif;
-            font-size: 16px;
+			font-family: Lato, sans-serif;
+			font-size: 16px;
 		}
-		#colorform{
-			background-color:#dfecdf;
+
+		#colorform {
+			background-color: #dfecdf;
 			color: #111;
-			padding:1em;width:400px;
+			padding: 1em;
+			width: 400px;
 		}
-		#colorform p#info{
-			background-color:white;
+
+		#colorform p#info {
+			background-color: white;
 			color: black;
-			width:300px;
-			height:100px;
-			padding:.5em;
+			width: 300px;
+			height: 100px;
+			padding: .5em;
 		}
-		
-		#colorform legend{ 
-			font-weight:bold;
-			font-size:1.2em;
+
+		#colorform legend {
+			font-weight: bold;
+			font-size: 1.2em;
 		}
 	</style>
 </head>
+
 <body>
 
-<div id="colorform">
-	<legend>Choose your favorite color!</legend>
-	<p><input type="radio" name="colorGroup" value="red" /> Red</p>
-	<p><input type="radio" name="colorGroup" value="green" /> Green</p>
-	<p><input type="radio" name="colorGroup" value="blue" /> Blue</p>
-	<p><button id="colorButton" type="button">Submit</button></p>
-	<p id="info"></p>
-</div>
+	<div id="colorform">
+		<!--
+		Added an id tag for legend to call it in javaScript.
+		Also added onclick values for the radio buttons and the submit button in order for code to call
+		the functions defined in JavaScript below.
+	-->
+		<legend id="legend">Choose your favorite color!</legend>
+		<p><input type="radio" name="colorGroup" value="red" onclick="checkColorValue(this.value)" /> Red</p>
+		<p><input type="radio" name="colorGroup" value="green" onclick="checkColorValue(this.value)" /> Green</p>
+		<p><input type="radio" name="colorGroup" value="blue" onclick="checkColorValue(this.value)" /> Blue</p>
+		<p><button onclick="displayColorValue()" id="colorButton" type="button">Submit</button></p>
+		<p id="info"></p>
+	</div>
 
-<script>
-/* Write your code here! */
-</script>
+	<script>
+
+		function checkColorValue(colorChoice) {
+			/* Based on what radio is selected, changes the HTML code in the p info tag to display*/
+			document.getElementById("info").innerHTML = "You have selected the value " + colorChoice;
+
+		}
+
+		function displayColorValue() {
+			let radios = document.getElementsByName("colorGroup");
+			let colorValue;
+
+			for (let i = 0; i < radios.length; i++) {
+				if( radios[i].checked) {
+					colorValue = radios[i].value;
+					break;
+				}
+			}
+			document.getElementById("info").innerHTML = "Your FINAL CHOICE is value " + colorValue;
+			document.getElementById("legend").style.color = colorValue; 
+			
+		}
+		/* 
+			When writing this code, I used these two outside sources as refrences:
+			* https://www.dyn-web.com/tutorials/forms/radio/get-selected.php
+			* https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_radio_value3 
+		*/
+	</script>
 </body>
+
 </html>

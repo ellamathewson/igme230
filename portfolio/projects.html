@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- This line of refrence I got from NathanG on Stack Overflow:
+    https://stackoverflow.com/questions/24922833/fontawesome-icons-not-showing-why
+    -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
+
+    <title>Ella Mathewson Portfolio</title>
+</head>
+
+<body>
+    <div class="mainContent">
+
+        <nav>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
+            <a class="navLink" href="https://google.com" class="link" id="proj">Projects</a>
+            <a class="navLink" href="https://google.com" class="link">About</a>
+            <a class="navLink" href="https://google.com" class="link">Resume</a>
+            <a class="navLink" href="https://google.com" class="link">Contact</a>
+        </nav>
+
+
+        <nav class="projNav">
+            <a class="projLink" href="https://google.com" class="link">All</a>
+            <a class="projLink" href="https://google.com" class="link">C#</a>
+            <a class="projLink" href="https://google.com" class="link">Design</a>
+            <a class="projLink" href="https://google.com" class="link">HTML and CSS</a>
+            <a class="projLink" href="https://google.com" class="link">JavaScript</a>
+        </nav>
+
+        <div class="projectsGrid">
+
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/alumniLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/boogieLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/huegridLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/wearableLogo.png"></a>
+            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/wearableLogo.png"></a>
+
+        </div>
+
+        <footer>
+            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
+            <p><a class="footerLink" href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
+                    </i> ellamathewson</a></p>
+            <p><a href="https://www.linkedin.com/in/ella-mathewson-7736a7154/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    Ella Mathewson</a></p>
+        </footer>
+    </div>
+
+    <script>
+        onPage();
+        loadProjects();
+
+        //let projectImages = document.getElementsByTagName("img");
+
+        function loadProjects() {
+            /* This line of code came from Darius Morawiec on Stack Overflow:
+                https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag
+             */
+             let images = document.getElementsByTagName("img");
+             let imgArray = [];
+             for (let i = 0; i < images.Length; i++){
+                imgArray.push(document.getElementsByTagName("img"));
+                //imgArray[i].style.opactiy = 1;
+                }
+        }
+
+        function onPage() {
+            let currentPage = document.getElementById("proj");
+            currentPage.style.backgroundColor = "#0C6B3B"
+            currentPage.style.color = "white";
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+<!--
+
+    
+        function loadProjects() {
+            /* This line of code came from Darius Morawiec on Stack Overflow:
+                https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag
+             */
+            //let numImages = document.getElementById("projectsGrid").getElementsByTagName("img").length;
+            //for (let i = 0; i < numImages; i++){
+                
+            //}
+        }
+
+-->
