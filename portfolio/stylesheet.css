@@ -6,7 +6,7 @@
     font-family: 'Mako', sans-serif;
 }
 
-.introSection {
+.introSection, article {
     display: flex;
     margin: 2.5em 5em;
     align-items: center;
@@ -63,6 +63,21 @@ hr {
     width: 30%;
     background-color: rgb(22, 165, 93);
 }
+
+h3 {
+    margin-left: 47%;
+    color: #0C6B3B;
+    font-size: 22px;
+}
+
+.aboutPara {
+    width: 40%;
+    margin-right: 10%;
+    margin-left: 5%;
+    font-size: 18px;
+    color: black;
+}
+
 
 /* Width, margin, and padding are the same here as the nav bar*/
 footer {
