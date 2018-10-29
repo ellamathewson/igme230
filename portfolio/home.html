@@ -18,7 +18,7 @@
     <div class="mainContent">
 
         <nav>
-            <a class="navLink" href="https://google.com" class="link" id="logo">EM</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
             <a class="navLink" href="https://google.com" class="link">Projects</a>
             <a class="navLink" href="https://google.com" class="link">About</a>
             <a class="navLink" href="https://google.com" class="link">Resume</a>
@@ -26,7 +26,7 @@
         </nav>
 
         <div class="introSection">
-            <img alt="A picture of me at an apple orchard" src="media\homePicResize.JPG">
+            <img alt="A picture of me at an apple orchard" src="media\homePicResize.jpg">
             <h2 class="introPara">Hello! I'm Ella. I'm a current New Media Interactive Development student who uses both
                 coding and design to create interactive programs
             </h2>
@@ -44,8 +44,8 @@
             in difficulty and the challenges change every 5 levels. 
         </p>
 
-        <img class="slideShow" src="media/boogielogoResized.jpg">
-        <img class="slideShow" src="media/boogieLevel1.PNG">
+        <img class="slideShow" src="media/boogielogoResize.png">
+        <img class="slideShow" src="media/boogieLevel1.jpg">
         <img class="slideShow" src="media/boogieLevel2.PNG">
 
     </article>
@@ -72,10 +72,10 @@
             slideshow();
             
             function slideshow() {
-                //grabs the slideshow from HTML
+                //grabs the slideshow 
                 var images = document.getElementsByClassName("slideShow");
                 //loop to remove the images from the HTML
-                for (let i = 0; i < x.length; i++) {
+                for (let i = 0; i < images.length; i++) {
                    images[i].style.display = "none";  
                 }
                 //increases variable
@@ -87,7 +87,7 @@
                 //sets the display of the current image to block, shows image on screen
                 images[myIndex-1].style.display = "block";  
                 //Changes image every 3 seconds
-                setTimeout(carousel, 3000); 
+                setTimeout(slideshow, 3000); 
             }
             </script>
 
