@@ -14,13 +14,13 @@
 
 /* Sets width of nav to be across the entire page, as well as moves it up to fill the small 
 gap made by the body. Padding is used for the links on the nav bar, and it is filled. */
-nav {
+nav, .projNav {
     width: 100%;
     margin: 2% 0;
     padding: 1.5% 0;
 }
 
-a {
+a, .projLink {
     text-decoration: none;
     font-size: 16px;
 }
@@ -104,4 +104,22 @@ footer > p {
 
 footer > a {
     color: black;
+}
+
+/*
+    PROJECTS PAGE CSS
+*/
+
+.projNav {
+    border: 1px solid black;
+    width: 100%;
+    margin: 2% 0;
+    padding: 1.5% 0;
+
+}
+
+.projLink {
+    color: #0C6B3B;
+    padding: 25px 50px;
+    margin: 2% 0;
 }
