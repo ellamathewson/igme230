@@ -1,26 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Mako');
 
+/*
+
+    CSS ON EVERY PAGE
+
+*/
 .mainContent {
     width: 90%;
     margin: 0 5%;
     font-family: 'Mako', sans-serif;
 }
 
-.introSection, article {
-    display: flex;
-    margin: 2.5em 5em;
-    align-items: center;
-}
-
-/* Sets width of nav to be across the entire page, as well as moves it up to fill the small 
-gap made by the body. Padding is used for the links on the nav bar, and it is filled. */
-nav, .projNav {
+nav {
     width: 100%;
     margin: 2% 0;
     padding: 1.5% 0;
 }
 
-a, .projLink {
+a {
     text-decoration: none;
     font-size: 16px;
 }
@@ -29,61 +26,65 @@ a:visited {
     color: black;
 }
 
-.navLink {
-    color: #0C6B3B;
-    padding: 25px 50px;
-    margin: 2% 0;
-}
-
-#logo {
-    margin-right: 44%;
-}
-
-.navLink:hover {
-    background-color: #0C6B3B;
-    color: white;
-}
-
-.navLink:active {
-    background-color: #DC655C;
-    color: white;
-}
-
-.introPara {
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: #0C6B3B
-}
-
-hr {
-    width: 30%;
-    background-color: rgb(22, 165, 93);
-}
-
+/* Used for headers on pages */
 h3 {
     margin-left: 47%;
     color: #0C6B3B;
     font-size: 22px;
 }
 
-.aboutParaHome {
-    width: 40%;
-    margin-right: 10%;
-    margin-left: 5%;
-    font-size: 18px;
-    color: black;
+/* Used for elements that are next to each other; 
+    on home and about pages */
+.sideBySide {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5% 0 5% 15%;
 }
 
-.slideShow {
-    display: none;
+/* 
+
+
+    NAV BAR
+
+
+*/
+
+/* Nav bar text color and spacing across page */
+.navLink {
+    color: #0C6B3B;
+    padding: 25px 50px;
+    margin: 2% 0;
 }
 
+/* Puts 'EM' in top left corner */
+#logo {
+    margin-right: 44%;
+}
 
-/* Width, margin, and padding are the same here as the nav bar*/
+/* When mouse hovers over it, changes background color */
+.navLink:hover {
+    background-color: #0C6B3B;
+    color: white;
+}
+
+/* When clicked, background color changes to show user they have clicked*/
+.navLink:active {
+    background-color: #DC655C;
+    color: white;
+}
+
+/* 
+
+
+    FOOTER
+
+
+*/
+
+/* Width, margin, and padding are the same here as the nav bar */
 footer {
     width: 100%;
     margin: 2% 0;
@@ -98,43 +99,78 @@ footer {
     justify-content: center;
 }
 
+/* Words in footer, spaced out */
 footer > p {
     padding: 0 50px;
 }
 
+/* Links in footer */
 footer > a {
     color: black;
 }
 
-/*
-    PROJECTS PAGE CSS
+
+/* 
+
+    HOME PAGE
+
 */
 
-.pageTitle {
-    margin-left: 20%;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    color: #0C6B3B;
+/* Code for info paragraph at top of home page */
+.introPara {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 30px;
+    color: #0C6B3B
 }
 
+/* Dividing line between home info and project preview */
+hr {
+    width: 30%;
+    background-color: rgb(22, 165, 93);
+}
+
+/* Paragraph about project hilighted on home page*/
+#aboutParaHome {
+    width: 40%;
+    font-size: 18px;
+    color: black;
+}
+
+/* Class for slideshow on home page */
+.slideShow {
+    display: none;
+}
+
+/*                      
+
+
+    PROJECTS PAGE 
+
+
+*/                     
+
+/* Nav for projects */
 .projNav {
     width: 60%;
     margin: 2% 20%;
     padding: 1.5% 0;
 }
 
+/* links in project nav, for spacing */
 .projLink {
     padding: 25px 50px;
     margin: 2% 0;
     color: black;
 }
 
+/* When hovering, text underlines and changes color */
 .projLink:hover {
     color: #0C6B3B;
     text-decoration: underline;
 }
 
+/* Grid of images of projects aligned with flexbox */
 .projectsGrid {
     display: flex;
     flex-wrap: wrap;
@@ -142,7 +178,7 @@ footer > a {
     align-items: center;
 }
 
-/* */
+/* Image sizing and spacing for projects */
 .projImg {
     width: 300px;
     margin: 2% 2%;
@@ -153,6 +189,7 @@ footer > a {
     transform: scale(1.1);
 }
 
+/* With link set as an image, resets the spacing */
 .imgLink {
     margin: 0;
     padding: 0 20px;
@@ -165,23 +202,16 @@ footer > a {
 
 */
 
-.sideBySide {
-    width: 75%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 0 5% 15%;
-}
-
+/* Sizing for images on about page */
 .aboutImg {
     width: 50%;
     height: 50%;
 }
 
+/* Spacing for about paragraphs */
 .aboutPara {
     width: 100%;
     font-size: 18px;
     color: black;
-    margin: 0 2%;
+    margin: 0 3%;
 }
