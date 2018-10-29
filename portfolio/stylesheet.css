@@ -225,6 +225,19 @@ hr {
 
 */
 
+.backToProjLink {
+    color: #0C6B3B;
+    font-size: 18px;
+}
+
+.backToProjLink:visited {
+    color: #0C6B3B;
+}
+
+.backToProjLink:hover {
+    text-decoration: underline;
+}
+
 #vertical {
     margin-right: 5%;
     width: 70%;
