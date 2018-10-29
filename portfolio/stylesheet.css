@@ -145,4 +145,12 @@ footer > a {
     width: 300px;
     margin: 2% 2%;
     border: 1px solid gray;
+    height: 0;
+    overflow: hidden;
+    animation: entrance 1s ease 1s forwards;
+}
+
+@keyframes entrance {
+    from{height: 0;}
+    to {height: 300px;}
 }
