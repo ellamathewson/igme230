@@ -19,14 +19,12 @@
 
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://google.com" class="link">Projects</a>
+            <a class="navLink" href="https://google.com" class="link" id="proj">Projects</a>
             <a class="navLink" href="https://google.com" class="link">About</a>
             <a class="navLink" href="https://google.com" class="link">Resume</a>
             <a class="navLink" href="https://google.com" class="link">Contact</a>
         </nav>
 
-
-        <h2>Projects</h2>
 
         <nav class="projNav">
             <a class="projLink" href="https://google.com" class="link">All</a>
@@ -36,7 +34,14 @@
             <a class="projLink" href="https://google.com" class="link">JavaScript</a>
         </nav>
 
-        
+        <div class="projectsGrid">
+
+            <img class="projImg" src="media/alumniLogo.png">
+            <img class="projImg" src="media/boogieLogo.png">
+            <img class="projImg" src="media/huegridLogo.png">
+            <img class="projImg" src="media/wearableLogo.png">
+
+        </div>
 
         <footer>
             <p><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
@@ -46,6 +51,16 @@
                     Ella Mathewson</a></p>
         </footer>
     </div>
+
+    <script>
+        onPage();
+        
+        function onPage() {
+            let currentPage = document.getElementById("proj");
+            currentPage.style.backgroundColor = "#0C6B3B"
+            currentPage.style.color = "white";
+        }
+    </script>
 
 </body>
 
