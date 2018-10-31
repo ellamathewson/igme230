@@ -233,6 +233,7 @@ hr {
 .projImg {
     width: 300px;
     margin: 2% 2%;
+    padding: 0 20px;
 }
 
 /* Suddle growing for hovering over images on projects page*/
@@ -240,11 +241,8 @@ hr {
     transform: scale(1.1);
 }
 
-/* With link set as an image, resets the spacing */
-.imgLink {
-    margin: 0;
-    padding: 0 20px;
-
+.design, .js, .html {
+    display: block;
 }
 
 /*

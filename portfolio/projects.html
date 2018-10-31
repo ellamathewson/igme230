@@ -36,11 +36,11 @@
 
         <div class="projectsGrid">
 
-            <a class="imgLink" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img class="projImg" src="media/alumniLogo.png"></a>
-            <a class="imgLink" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg" src="media/boogieLogo.png"></a>
-            <a class="imgLink" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg" src="media/huegridLogo.png"></a>
-            <a class="imgLink" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg" src="media/wearableLogo.png"></a>
-            <a class="imgLink" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img class="projImg" src="media/tennisLogo.png"></a>
+            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img class="projImg" src="media/alumniLogo.png"></a>
+            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg" src="media/boogieLogo.png"></a>
+            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg" src="media/huegridLogo.png"></a>
+            <a class="html" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg" src="media/wearableLogo.png"></a>
+            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img class="projImg" src="media/tennisLogo.png"></a>
 
         </div>
 
@@ -52,6 +52,7 @@
                     Ella Mathewson</a></p>
         </footer>
     </div>
+    +
 
     <script>
         onPage();
@@ -85,8 +86,29 @@
 
             console.log(buttonClicked);
             if (buttonClicked == "design") {
-
+                displayProjects("design");
+                hideProjects("js");
+                hideProjects("html");
             }
+            else if (buttonClicked == "html") {
+                displayProjects("html");
+                hideProjects("js");
+                hideProjects("design");
+            }
+            else if (buttonClicked == "js") {
+                displayProjects("js");
+                hideProjects("design");
+                hideProjects("html");
+            }
+        }
+
+        function displayProjects(projID) {
+            document.getElementById(projID).style.display = "none";
+            console.log(projID);
+        }
+
+        function hideProjects(projID) {
+            document.getElementById(projID).style.display = "block";
         }
 
     </script>
