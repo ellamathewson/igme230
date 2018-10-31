@@ -18,7 +18,20 @@
     <div class="mainContent">
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="proj">Projects</a>
+            <div class="dropdown">
+                <!-- 
+                        Code based on this tutorial:
+                        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown 
+                    -->
+                <a class="navLink" onclick="dropdown()" id="proj">Projects</a>
+                <div class="dropdownContent" id="projDropdown">
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">All</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">C#</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Design</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">HTML and CSS</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">JavaScript</a>
+                </div>
+            </div>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
@@ -42,7 +55,7 @@
                 </div>
             </form>
 
-<!--
+            <!--
     House icon: https://fontawesome.com/v4.7.0/icon/home
     Phone icon: https://fontawesome.com/v4.7.0/icon/phone
 

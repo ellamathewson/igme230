@@ -18,11 +18,24 @@
     <div class="mainContent">
 
         <nav>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" id="logo">EM</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="proj">Projects</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
+            <div class="dropdown">
+                <!-- 
+                        Code based on this tutorial:
+                        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown 
+                    -->
+                <a class="navLink" onclick="dropdown()" id="proj">Projects</a>
+                <div class="dropdownContent" id="projDropdown">
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">All</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">C#</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Design</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">HTML and CSS</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">JavaScript</a>
+                </div>
+            </div>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
         </nav>
 
 
@@ -36,11 +49,16 @@
 
         <div class="projectsGrid">
 
-            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img class="projImg" src="media/alumniLogo.png"></a>
-            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg" src="media/boogieLogo.png"></a>
-            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg" src="media/huegridLogo.png"></a>
-            <a class="html" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg" src="media/wearableLogo.png"></a>
-            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img class="projImg" src="media/tennisLogo.png"></a>
+            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img
+                    class="projImg" src="media/alumniLogo.png"></a>
+            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg"
+                    src="media/boogieLogo.png"></a>
+            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg"
+                    src="media/huegridLogo.png"></a>
+            <a class="html" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg"
+                    src="media/wearableLogo.png"></a>
+            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img
+                    class="projImg" src="media/tennisLogo.png"></a>
 
         </div>
 
@@ -108,7 +126,7 @@
 
         function hideProjects(projID) {
             document.getElementById(projID).style.display = "inline";
-        } 
+        }
 
     </script>
 
