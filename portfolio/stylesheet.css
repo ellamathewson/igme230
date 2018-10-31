@@ -267,9 +267,8 @@ hr {
 
 form {
     width: 40%;
-
     padding: 2em 2em 2em .5em;
-    
+    display: block;
     border-radius: 1em;
 }
 
@@ -280,13 +279,6 @@ form {
 
 form div + div {
     margin-top: 1em;
-}
-
-label {
-    display: inline-block;
-    width: 90px;
-    text-align: right;
-    color: #0C6B3B;
 }
 
 input, textarea {
@@ -327,4 +319,10 @@ button:hover {
     text-decoration: underline;
     cursor: pointer;
     background-color: #DC655C;
+}
+
+#contactInfo {
+    border: 1px solid black;
+    display: block;
+    float: right;
 }
