@@ -91,18 +91,6 @@ h2 {
     https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
 
 */
-.dropdownButton {
-    background-color: lightgray;
-    color: #0C6B3B;
-    padding: 25px 50px;
-    border: none;
-    cursor: pointer; 
-    margin: 2% 0;
-}
-
-.dropdownButton:hover, dropdownButton:focus {
-    background-color: #DC655C;
-}
 
 .dropdown {
     position: relative;
@@ -112,7 +100,7 @@ h2 {
 .dropdownContent {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: lightgray;
     min-width: 160px;
     overflow: auto;
     z-index: 1;
@@ -125,9 +113,15 @@ h2 {
     display: block;
 }
 
-.dropdown a:hover {
-    background-color: #DC655C;
+#proj {
+    color: black;
 }
+
+#proj:active {
+    color: white;
+}
+
+
 
 .show {
     display: block;
