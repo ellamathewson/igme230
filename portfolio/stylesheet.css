@@ -34,6 +34,12 @@ h3 {
     font-size: 22px;
 }
 
+h2 {
+    color: #0C6B3B;
+    font-size: 22px;
+    margin-left: 38%;
+}
+
 /* Used for elements that are next to each other; 
     on home and about pages */
 .sideBySide {
@@ -58,6 +64,7 @@ h3 {
     color: #0C6B3B;
     padding: 25px 50px;
     margin: 2% 0;
+
 }
 
 /* Puts 'EM' in top left corner */
@@ -69,6 +76,8 @@ h3 {
 .navLink:hover {
     background-color: #0C6B3B;
     color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 /* When clicked, background color changes to show user they have clicked*/
@@ -252,4 +261,73 @@ hr {
 .underneathPara {
     width: 50%;
     margin-left: 30%;
+}
+
+/*
+
+
+    CONTACT PAGE
+
+
+*/
+
+form {
+    width: 30%;
+    border: 1px solid black;
+    padding: 2em;
+    margin-right: 40%;
+    border-radius: 1em;
+}
+
+.formInput {
+    margin: 30px 0 0 0;
+}
+
+
+form div + div {
+    margin-top: 1em;
+}
+
+input, textarea {
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    /* https://www.w3schools.com/css/css3_shadows.asp */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #DC655C;
+}
+
+textarea {
+    vertical-align: top;
+    height: 10em;
+    font-family: 'Mako', sans-serif;
+
+}
+
+button {
+    width: 200px;
+    margin-left: 15%;
+    border: none;
+    padding: 1em;
+    margin-top: 30px;
+    color: white;
+    background-color: gray;
+    border-radius: 1em;
+    /* https://www.w3schools.com/css/css3_shadows.asp */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: #DC655C;
+}
+
+#contactInfo {
+    border: 1px solid black;
 }
