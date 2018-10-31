@@ -19,10 +19,10 @@
 
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://google.com" class="link">Projects</a>
-            <a class="navLink" href="https://google.com" class="link">About</a>
-            <a class="navLink" href="https://google.com" class="link">Resume</a>
-            <a class="navLink" href="https://google.com" class="link">Contact</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="proj">Projects</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
         </nav>
 
         <div class="sideBySide">
@@ -36,20 +36,19 @@
 
         <h3>Projects</h3>
 
-    <article class="sideBySide">
-        
-        <p id="aboutParaHome">My most rececnt project is a web game called Boogie Worms.
-            Using HTML, CSS, and JavaScript, I created an intearctive game where the user
-            has to catch the dancing worms on the screen with their mouse. The levels increase
-            in difficulty and the challenges change every 5 levels. 
-        </p>
+        <article class="sideBySide">
 
-        <img class="slideShow" src="media/boogieLogoResize.png">
-        <img class="slideShow" src="media/boogieLevel1.jpg">
-        <img class="slideShow" src="media/boogieLevel2.PNG">
+            <p id="aboutParaHome">My most rececnt project is a web game called Boogie Worms. Using HTML, CSS, and JavaScript,
+                I created an intearctive game where the user has to catch the dancing worms on the screen with their mouse.
+                The levels increase in difficulty and the challenges change every 5 levels.
+            </p>
 
-    </article>
-<!--
+            <img class="slideShow" src="media/boogieLogoResize.png">
+            <img class="slideShow" src="media/boogieLevel1.jpg">
+            <img class="slideShow" src="media/boogieLevel2.PNG">
+
+        </article>
+        <!--
     Links for the icons from Font Awesome:
     Email: https://fontawesome.com/v4.7.0/icon/envelope-o
     GitHub: https://fontawesome.com/v4.7.0/icon/github
@@ -57,10 +56,10 @@
 -->
         <footer>
             <p><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
-            <p><a class="footerLink"  href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
-                </i> ellamathewson</a></p>
-            <p><a href="https://www.linkedin.com/in/ella-mathewson-7736a7154/"><i class="fa fa-linkedin-square" 
-                aria-hidden="true"></i> Ella Mathewson</a></p>
+            <p><a class="footerLink" href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
+                    </i> ellamathewson</a></p>
+            <p><a href="https://www.linkedin.com/in/ella-mathewson-7736a7154/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    Ella Mathewson</a></p>
         </footer>
     </div>
 
@@ -68,36 +67,37 @@
         /* Code based off of tutorial on w3 Schools:
         https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr
         */
-            var myIndex = 0;
-            slideshow();
-            
-            function slideshow() {
-                //grabs the slideshow 
-                var images = document.getElementsByClassName("slideShow");
-                //loop to remove the images from the HTML
-                for (let i = 0; i < images.length; i++) {
-                   images[i].style.display = "none";  
-                }
-                //increases variable
-                myIndex++;
-                //if variable is greater than number of images, resets slideshow to beginning
-                if (myIndex > images.length) {
-                    myIndex = 1
-                }    
-                //sets the display of the current image to block, shows image on screen
-                images[myIndex-1].style.display = "block";  
-                //Changes image every 3 seconds
-                setTimeout(slideshow, 3000); 
+        var myIndex = 0;
+        slideshow();
+
+        function slideshow() {
+            //grabs the slideshow 
+            var images = document.getElementsByClassName("slideShow");
+            //loop to remove the images from the HTML
+            for (let i = 0; i < images.length; i++) {
+                images[i].style.display = "none";
             }
+            //increases variable
+            myIndex++;
+            //if variable is greater than number of images, resets slideshow to beginning
+            if (myIndex > images.length) {
+                myIndex = 1
+            }
+            //sets the display of the current image to block, shows image on screen
+            images[myIndex - 1].style.display = "block";
+            //Changes image every 3 seconds
+            setTimeout(slideshow, 3000);
+        }
 
         onPage();
-        
+
         function onPage() {
             let currentPage = document.getElementById("logo");
             currentPage.style.backgroundColor = "#0C6B3B"
             currentPage.style.color = "white";
         }
-            </script>
+    </script>
 
 </body>
+
 </html>
