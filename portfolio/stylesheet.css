@@ -34,6 +34,12 @@ h3 {
     font-size: 22px;
 }
 
+h2 {
+    margin-left: 40%;
+    color: #0C6B3B;
+    font-size: 22px;
+}
+
 /* Used for elements that are next to each other; 
     on home and about pages */
 .sideBySide {
@@ -264,7 +270,6 @@ form {
     padding: 2em;
     display: block;
     border-radius: 1em;
-    border: 1px solid pink;
 }
 
 .formInput {
@@ -318,7 +323,6 @@ button:hover {
 
 #contactInfo {
     width: 60%;
-    border: 1px solid pink;
 }
 
 #contactInfo > p {
