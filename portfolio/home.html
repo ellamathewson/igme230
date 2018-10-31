@@ -19,7 +19,20 @@
 
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="proj">Projects</a>
+        <div class="dropdown">
+            <!-- 
+                Code based on this tutorial:
+                https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown 
+            -->
+            <a class="navLink" onclick="dropdown()" class="link" id="proj">Projects</a>
+            <div class="dropdownContent" id="projDropdown">
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">All</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">C#</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Design</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">HTML and CSS</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">JavaScript</a>
+            </div>
+        </div>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
@@ -95,6 +108,22 @@
             let currentPage = document.getElementById("logo");
             currentPage.style.backgroundColor = "#0C6B3B"
             currentPage.style.color = "white";
+        }
+
+        function dropdown() {
+            document.getElementById("projDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if(!event.target.matches('.navLink')) {
+                var dropdowns = document.getElementsByClassName("dropdownContent");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if(openDropdown.classList.contains('show')){
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
         }
     </script>
 
