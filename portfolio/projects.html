@@ -18,20 +18,20 @@
     <div class="mainContent">
 
         <nav>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="proj">Projects</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" id="logo">EM</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="proj">Projects</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
         </nav>
 
 
         <nav class="projNav">
-            <a class="projLink" href="https://google.com" class="link">All</a>
-            <a class="projLink" href="https://google.com" class="link">C#</a>
-            <a class="projLink" href="https://google.com" class="link">Design</a>
-            <a class="projLink" href="https://google.com" class="link">HTML and CSS</a>
-            <a class="projLink" href="https://google.com" class="link">JavaScript</a>
+            <a class="projLink" id="all" onclick="filterProjects(this.id)">All</a>
+            <a class="projLink" id="cSharp" onclick="filterProjects(this.id)">C#</a>
+            <a class="projLink" id="design" onclick="filterProjects(this.id)">Design</a>
+            <a class="projLink" id="htmlCSS" onclick="filterProjects(this.id)">HTML and CSS</a>
+            <a class="projLink" id="javascript" onclick="filterProjects(this.id)">JavaScript</a>
         </nav>
 
         <div class="projectsGrid">
@@ -55,7 +55,7 @@
 
     <script>
         onPage();
-        loadProjects();
+        //loadProjects();
 
         //let projectImages = document.getElementsByTagName("img");
 
@@ -76,24 +76,21 @@
             currentPage.style.backgroundColor = "#0C6B3B"
             currentPage.style.color = "white";
         }
+        /*
+        https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button
+        */
+
+        function filterProjects(buttonID) {
+            let buttonClicked = buttonID;
+
+            console.log(buttonClicked);
+            if (buttonClicked == "design") {
+
+            }
+        }
+
     </script>
 
 </body>
 
 </html>
-
-
-<!--
-
-    
-        function loadProjects() {
-            /* This line of code came from Darius Morawiec on Stack Overflow:
-                https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag
-             */
-            //let numImages = document.getElementById("projectsGrid").getElementsByTagName("img").length;
-            //for (let i = 0; i < numImages; i++){
-                
-            //}
-        }
-
--->
