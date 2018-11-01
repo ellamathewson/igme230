@@ -139,9 +139,14 @@
         }
 
         function loopDisplay(className, projName) {
+            //gets all the elements with the same class
             let sameClass = document.getElementsByClassName(className); 
+            //takes the value of how many elements there are of the class
             for(let i = 1; i <= sameClass.length; i++) {
+                //sets a local variable equal to the name plus a value
+                //all ids of the projects have a numbered value to them
                 let idName = projName + i;
+                //sends it to displayProjects
                 displayProjects(idName);
             }
         }
@@ -155,6 +160,7 @@
         }
 
         function displayProjects(projID) {
+            //changes the display of the div 
             document.getElementById(projID).style.display = 'block';
         }
 
