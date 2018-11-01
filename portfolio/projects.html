@@ -47,23 +47,23 @@
         </nav>
 
         <div class="projectsGrid">
-            <div id="design1">
+            <div class="countDesign" id="design1">
                 <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img class="projImg"
                         src="media/alumniLogo.png"></a>
             </div>
-            <div id="js1">
+            <div class="countJS" id="js1">
                 <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg"
                         src="media/boogieLogo.png"></a>
             </div>
-            <div id="js2">
+            <div class="countJS" id="js2">
                 <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg"
                         src="media/huegridLogo.png"></a>
             </div>
-            <div id="html1">
+            <div class="countHTML" id="html1">
                 <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg"
                         src="media/wearableLogo.png"></a>
             </div>
-            <div id="design2">
+            <div class="countDesign" id="design2">
                 <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img class="projImg"
                         src="media/tennisLogo.png"></a>
             </div>
@@ -112,39 +112,45 @@
             console.log(buttonClicked);
 
             if (buttonClicked == "allLink") {
-                displayProjects("design1");
-                displayProjects("design2");
-                displayProjects("js1");
-                displayProjects("js2");
-                displayProjects("html1");
+                loopDisplay("countJS", "js");
+                loopDisplay("countDesign", "design");
+                loopDisplay("countHTML", "html");
             }
             else if (buttonClicked == "cSharpLink") {
-                hideProjects("design1");
-                hideProjects("design2");
-                hideProjects("js1");
-                hideProjects("js2");
-                hideProjects("html1");
+                loopHide("countJS", "js");
+                loopHide("countDesign", "design");
+                loopHide("countHTML", "html");
             }
             else if (buttonClicked == "designLink") {
-                displayProjects("design1");
-                displayProjects("design2");
-                hideProjects("js1");
-                hideProjects("js2");
-                hideProjects("html1");
+                loopHide("countJS", "js");
+                loopDisplay("countDesign", "design");
+                loopHide("countHTML", "html");
             }
             else if (buttonClicked == "htmlLink") {
-                hideProjects("design1");
-                hideProjects("design2");
-                hideProjects("js1");
-                hideProjects("js2");
-                displayProjects("html1");
+                loopHide("countJS", "js");
+                loopHide("countDesign", "design");
+                loopDisplay("countHTML", "html");
             }
             else if (buttonClicked == "jsLink") {
-                hideProjects("design1");
-                hideProjects("design2");
-                displayProjects("js1");
-                displayProjects("js2");
-                hideProjects("html1");
+                loopDisplay("countJS", "js");
+                loopHide("countDesign", "design");
+                loopHide("countHTML", "html");
+                }
+        }
+
+        function loopDisplay(className, projName) {
+            let sameClass = document.getElementsByClassName(className); 
+            for(let i = 1; i <= sameClass.length; i++) {
+                let idName = projName + i;
+                displayProjects(idName);
+            }
+        }
+
+        function loopHide(className, projName) {
+            let sameClass = document.getElementsByClassName(className); 
+            for(let i = 1; i <= sameClass.length; i++) {
+                let idName = projName + i;
+                hideProjects(idName);
             }
         }
 
