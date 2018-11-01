@@ -20,9 +20,9 @@
 <body>
     <div class="mainContent">
 
-        <nav>        
+        <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="projects">Projects</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="projects">Projects</a>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
@@ -51,7 +51,7 @@
             <img class="slideShow" src="media/boogieLevel2Resize.PNG">
 
         </article>
-<!--
+        <!--
     Links for the icons from Font Awesome:
     Email: https://fontawesome.com/v4.7.0/icon/envelope-o
     GitHub: https://fontawesome.com/v4.7.0/icon/github
@@ -70,14 +70,36 @@
     <script type="text/javascript" src="javascript.js"></script>
 
     <script>
-            onPage();
+        onPage();
 
-function onPage() {
-    let currentPage = document.getElementById("logo");
-    currentPage.style.backgroundColor = "#0C6B3B"
-    currentPage.style.color = "white";
-}
-</script>
+        slideshow();
+
+        function slideshow() {
+            //grabs the slideshow 
+            var images = document.getElementsByClassName("slideShow");
+            //loop to remove the images from the HTML
+            for (let i = 0; i < images.length; i++) {
+                images[i].style.display = "none";
+            }
+            //increases variable
+            myIndex++;
+            //if variable is greater than number of images, resets slideshow to beginning
+            if (myIndex > images.length) {
+                myIndex = 1
+            }
+            //sets the display of the current image to block, shows image on screen
+            images[myIndex - 1].style.display = 'block';
+            //Changes image every 3 seconds
+            setTimeout(slideshow, 3000);
+        }
+
+
+        function onPage() {
+            let currentPage = document.getElementById("logo");
+            currentPage.style.backgroundColor = "#0C6B3B"
+            currentPage.style.color = "white";
+        }
+    </script>
 
 
 </body>
