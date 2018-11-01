@@ -86,23 +86,10 @@
             currentPage.style.color = "white";
         }
 
-        function dropdown() {
-            document.getElementById("projDropdown").classList.toggle("show");
-        }
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.navLink')) {
-                var dropdowns = document.getElementsByClassName("dropdownContent");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    let openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-
     </script>
+
+    <script type="text/javascript" src="javascript.js"></script>
+
 
 
 </body>

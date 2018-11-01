@@ -78,7 +78,15 @@
     </div>
 
     <!-- Links to seperate Javascript file page -->
-    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="javascript.js">
+        onPage();
+
+        function onPage() {
+            let currentPage = document.getElementById("logo");
+            currentPage.style.backgroundColor = "#0C6B3B"
+            currentPage.style.color = "white";
+        }
+    </script>
 
 
 </body>
