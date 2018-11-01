@@ -16,7 +16,6 @@
 
 <body>
     <div class="mainContent">
-
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
             <div class="dropdown">
@@ -39,32 +38,36 @@
         </nav>
 
         <div class="sideBySide">
-            <img class="aboutImg" src="media/aboutPic1Resize.jpg">
-            <p class="aboutPara">Hello, I'm a second year student studying at Rochester Institute of Technology, where I'm
-                majoring in New Media Interactive Development. I'm able to code in JavaScript, HTML, CSS, and C#. Along with
-                this, I am well versed in Adobe Illustrator, Photoshop, and InDesign.
+            <form action="https://formspree.io/exm1381@rit.edu" method="post">
+                <h2>Contact</h2>
+                <div class="formInput">
+                    <!--https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder-->
+                    <input type="text" id="name" name="user_name" placeholder="Full Name">
+                </div>
+                <div class="formInput">
+                    <input type="email" id="email" name="user_email" placeholder="Email address">
+                </div>
+                <div class="formInput">
+                    <textarea id="message" name="user_message" placeholder="Message"></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
 
-                <br><br> During my time at RIT, I have taken classes such as Digital Survey 1 and 2, as well as Interactive
-                Design and Algebra Problem Solving 1 and 2, which have taught me in-depth about design and programming. I
-                have also worked on personal projects, which include an interactive game for a Women in Computing Hackathon
-                on campus, Alumni Posters designed for Women in Computing club at RIT, as well as an interactive web game
-                called Boogie Worms.
+            <!--
+    House icon: https://fontawesome.com/v4.7.0/icon/home
+    Phone icon: https://fontawesome.com/v4.7.0/icon/phone
 
-                <br><br> I love overcoming challenges and finding solutions to problems, which is why I am always looking
-                for new projects to work on.
-            </p>
+-->
+
+            <div id="contactInfo">
+                <p><i class="fa fa-home" aria-hidden="true"></i> 137 Perkins Road Rochester, NY 14623</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> (440) 654 - 3822</p>
+                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
+
+            </div>
         </div>
-
-        <div class="sideBySide">
-            <p class="aboutPara">
-                Outside of academics, I play tennis through the RIT Tennis Club, which I also help run as vice-president. I'm also a member
-                of a volunteer organization called Momentum, where I learn leadership skills as well as volunteer in the
-                Rochester community. Currently I work as a Teaching Assistant in the IGM departmnet, grading for two introductory
-                JavaScript courses.
-            </p>
-            <img class="aboutImg" src="media/aboutPic2Resize.jpg">
-        </div>
-
         <footer>
             <p><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
             <p><a class="footerLink" href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
@@ -73,47 +76,22 @@
                     Ella Mathewson</a></p>
         </footer>
     </div>
-
     <script>
+
         onPage();
 
         function onPage() {
-            let currentPage = document.getElementById("about");
+            let currentPage = document.getElementById("contact");
             currentPage.style.backgroundColor = "#0C6B3B"
             currentPage.style.color = "white";
         }
+
     </script>
 
     <script type="text/javascript" src="javascript.js"></script>
 
-    </div>
+
 
 </body>
 
 </html>
-
-<!--
-            onPage();
-
-        function onPage() {
-            let currentPage = document.getElementById("about");
-            currentPage.style.backgroundColor = "#0C6B3B"
-            currentPage.style.color = "white";
-        }
-
-                function dropdown() {
-            document.getElementById("projDropdown").classList.toggle("show");
-        }
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.navLink')) {
-                var dropdowns = document.getElementsByClassName("dropdownContent");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    let openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
--->

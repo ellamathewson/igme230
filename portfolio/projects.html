@@ -19,28 +19,54 @@
 
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://google.com" class="link" id="proj">Projects</a>
-            <a class="navLink" href="https://google.com" class="link">About</a>
-            <a class="navLink" href="https://google.com" class="link">Resume</a>
-            <a class="navLink" href="https://google.com" class="link">Contact</a>
+            <div class="dropdown">
+                <!-- 
+                        Code based on this tutorial:
+                        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown 
+                    -->
+                <a class="navLink" onclick="dropdown()" id="proj">Projects</a>
+                <div class="dropdownContent" id="projDropdown">
+                    <a class="navLink" id="allLink" onclick="filterProjects(this.id)">All</a>
+                    <a class="navLink" id="cSharpLink" onclick="filterProjects(this.id)">C#</a>
+                    <a class="navLink" id="designLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" onclick="filterProjects(this.id)">Design</a>
+                    <a class="navLink" id="htmlLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" onclick="filterProjects(this.id)">HTML and CSS</a>
+                    <a class="navLink" id="jsLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" onclick="filterProjects(this.id)">JavaScript</a>
+                </div>
+            </div>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
         </nav>
 
-
         <nav class="projNav">
-            <a class="projLink" href="https://google.com" class="link">All</a>
-            <a class="projLink" href="https://google.com" class="link">C#</a>
-            <a class="projLink" href="https://google.com" class="link">Design</a>
-            <a class="projLink" href="https://google.com" class="link">HTML and CSS</a>
-            <a class="projLink" href="https://google.com" class="link">JavaScript</a>
+            <a class="projLink" id="allLink" onclick="filterProjects(this.id)">All</a>
+            <a class="projLink" id="cSharpLink" onclick="filterProjects(this.id)">C#</a>
+            <a class="projLink" id="designLink" onclick="filterProjects(this.id)">Design</a>
+            <a class="projLink" id="htmlLink" onclick="filterProjects(this.id)">HTML and CSS</a>
+            <a class="projLink" id="jsLink" onclick="filterProjects(this.id)">JavaScript</a>
         </nav>
 
         <div class="projectsGrid">
-
-            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/alumniLogo.png"></a>
-            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/boogieLogo.png"></a>
-            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/huegridLogo.png"></a>
-            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/wearableLogo.png"></a>
-            <a class="imgLink" href="https://google.com"><img class="projImg" src="media/wearableLogo.png"></a>
+            <div class="countDesign" id="design1">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img class="projImg"
+                        src="media/alumniLogo.png"></a>
+            </div>
+            <div class="countJS" id="js1">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg"
+                        src="media/boogieLogo.png"></a>
+            </div>
+            <div class="countJS" id="js2">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg"
+                        src="media/huegridLogo.png"></a>
+            </div>
+            <div class="countHTML" id="html1">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg"
+                        src="media/wearableLogo.png"></a>
+            </div>
+            <div class="countDesign" id="design2">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img class="projImg"
+                        src="media/tennisLogo.png"></a>
+            </div>
 
         </div>
 
@@ -55,7 +81,7 @@
 
     <script>
         onPage();
-        loadProjects();
+        //loadProjects();
 
         //let projectImages = document.getElementsByTagName("img");
 
@@ -63,12 +89,12 @@
             /* This line of code came from Darius Morawiec on Stack Overflow:
                 https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag
              */
-             let images = document.getElementsByTagName("img");
-             let imgArray = [];
-             for (let i = 0; i < images.Length; i++){
+            let images = document.getElementsByTagName("img");
+            let imgArray = [];
+            for (let i = 0; i < images.Length; i++) {
                 imgArray.push(document.getElementsByTagName("img"));
                 //imgArray[i].style.opactiy = 1;
-                }
+            }
         }
 
         function onPage() {
@@ -76,24 +102,108 @@
             currentPage.style.backgroundColor = "#0C6B3B"
             currentPage.style.color = "white";
         }
+
     </script>
+
+    <script type="text/javascript" src="javascript.js"></script>
+
 
 </body>
 
 </html>
 
-
 <!--
 
-    
-        function loadProjects() {
-            /* This line of code came from Darius Morawiec on Stack Overflow:
-                https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag
-             */
-            //let numImages = document.getElementById("projectsGrid").getElementsByTagName("img").length;
-            //for (let i = 0; i < numImages; i++){
-                
-            //}
+        /*
+        https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button
+        */
+
+        function filterProjects(buttonID) {
+            let buttonClicked = buttonID;
+
+            console.log(buttonClicked);
+
+            if (buttonClicked == "allLink") {
+                loopDisplay("countJS", "js");
+                loopDisplay("countDesign", "design");
+                loopDisplay("countHTML", "html");
+            }
+            else if (buttonClicked == "cSharpLink") {
+                loopHide("countJS", "js");
+                loopHide("countDesign", "design");
+                loopHide("countHTML", "html");
+            }
+            else if (buttonClicked == "designLink") {
+                loopHide("countJS", "js");
+                loopDisplay("countDesign", "design");
+                loopHide("countHTML", "html");
+            }
+            else if (buttonClicked == "htmlLink") {
+                loopHide("countJS", "js");
+                loopHide("countDesign", "design");
+                loopDisplay("countHTML", "html");
+            }
+            else if (buttonClicked == "jsLink") {
+                loopDisplay("countJS", "js");
+                loopHide("countDesign", "design");
+                loopHide("countHTML", "html");
+                }
         }
+
+        function loopDisplay(className, projName) {
+            //gets all the elements with the same class
+            let sameClass = document.getElementsByClassName(className); 
+            //takes the value of how many elements there are of the class
+            for(let i = 1; i <= sameClass.length; i++) {
+                //sets a local variable equal to the name plus a value
+                //all ids of the projects have a numbered value to them
+                let idName = projName + i;
+                //sends it to displayProjects
+                displayProjects(idName);
+            }
+        }
+
+        function loopHide(className, projName) {
+            let sameClass = document.getElementsByClassName(className); 
+            for(let i = 1; i <= sameClass.length; i++) {
+                let idName = projName + i;
+                hideProjects(idName);
+            }
+        }
+
+        function displayProjects(projID) {
+            //changes the display of the div 
+            document.getElementById(projID).style.display = 'block';
+        }
+
+        function hideProjects(projID) {
+            document.getElementById(projID).style.display = 'none';
+        }
+
+
+        //function for toggling the dropdown menu on nav bar
+        function dropdown() {
+            document.getElementById("projDropdown").classList.toggle("show");
+        }
+
+        //when viewing the dropdown menu, if the user clicks off the page, the dropdown menu will hide
+        window.onclick = function (event) {
+            if (!event.target.matches('.navLink')) {
+                var dropdowns = document.getElementsByClassName("dropdownContent");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+
+document.getElementById("design1").style.display = 'block';
+                document.getElementById("design2").style.display = 'block'
+                document.getElementById("html1").style.display = 'none';
+                document.getElementById("js1").style.display = 'none';
+                document.getElementById("js2").style.display = 'none';
 
 -->

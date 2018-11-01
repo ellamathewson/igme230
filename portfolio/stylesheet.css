@@ -1,26 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Mako');
 
+/*
+
+    CSS ON EVERY PAGE
+
+*/
 .mainContent {
     width: 90%;
     margin: 0 5%;
     font-family: 'Mako', sans-serif;
+    font-size: 18px;
 }
 
-.introSection, article {
-    display: flex;
-    margin: 2.5em 5em;
-    align-items: center;
-}
-
-/* Sets width of nav to be across the entire page, as well as moves it up to fill the small 
-gap made by the body. Padding is used for the links on the nav bar, and it is filled. */
-nav, .projNav {
+nav {
     width: 100%;
     margin: 2% 0;
     padding: 1.5% 0;
 }
 
-a, .projLink {
+a {
     text-decoration: none;
     font-size: 16px;
 }
@@ -29,61 +27,115 @@ a:visited {
     color: black;
 }
 
-.navLink {
-    color: #0C6B3B;
-    padding: 25px 50px;
-    margin: 2% 0;
-}
-
-#logo {
-    margin-right: 44%;
-}
-
-.navLink:hover {
-    background-color: #0C6B3B;
-    color: white;
-}
-
-.navLink:active {
-    background-color: #DC655C;
-    color: white;
-}
-
-.introPara {
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: #0C6B3B
-}
-
-hr {
-    width: 30%;
-    background-color: rgb(22, 165, 93);
-}
-
+/* Used for headers on pages */
 h3 {
     margin-left: 47%;
     color: #0C6B3B;
     font-size: 22px;
 }
 
-.aboutPara {
-    width: 40%;
-    margin-right: 10%;
-    margin-left: 5%;
-    font-size: 18px;
+h2 {
+    margin-left: 40%;
+    color: #0C6B3B;
+    font-size: 22px;
+}
+
+/* Used for elements that are next to each other; 
+    on home and about pages */
+.sideBySide {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5% 0 5% 15%;
+}
+
+/* 
+
+
+    NAV BAR
+
+
+*/
+
+/* Nav bar text color and spacing across page */
+.navLink {
+    color: #0C6B3B;
+    padding: 25px 50px;
+    margin: 2% 0;
+
+}
+
+/* Puts 'EM' in top left corner */
+#logo {
+    margin-right: 44%;
+}
+
+/* When mouse hovers over it, changes background color */
+.navLink:hover {
+    background-color: #0C6B3B;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* When clicked, background color changes to show user they have clicked*/
+.navLink:active {
+    background-color: #DC655C;
+    color: white;
+}
+
+/* 
+    DROPDOWN MENU: code based off this tutorial:
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
+
+*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    min-width: 160px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.dropdownContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#proj {
     color: black;
 }
 
-.slideShow {
-    display: none;
+#proj:active, #proj:hover, #proj:visited {
+    color: white;
+    background-color: #0C6B3B;
 }
 
 
-/* Width, margin, and padding are the same here as the nav bar*/
+
+.show {
+    display: block;
+}
+
+/* 
+
+
+    FOOTER
+
+
+*/
+
+/* Width, margin, and padding are the same here as the nav bar */
 footer {
     width: 100%;
     margin: 2% 0;
@@ -98,43 +150,78 @@ footer {
     justify-content: center;
 }
 
+/* Words in footer, spaced out */
 footer > p {
     padding: 0 50px;
 }
 
+/* Links in footer */
 footer > a {
     color: black;
 }
 
-/*
-    PROJECTS PAGE CSS
+
+/* 
+
+    HOME PAGE
+
 */
 
-.pageTitle {
-    margin-left: 20%;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    color: #0C6B3B;
+/* Code for info paragraph at top of home page */
+.introPara {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 30px;
+    color: #0C6B3B
 }
 
+/* Dividing line between home info and project preview */
+hr {
+    width: 30%;
+    background-color: rgb(22, 165, 93);
+}
+
+/* Paragraph about project hilighted on home page*/
+#aboutParaHome {
+    width: 40%;
+    font-size: 18px;
+    color: black;
+}
+
+/* Class for slideshow on home page */
+.slideShow {
+    display: none;
+}
+
+/*                      
+
+
+    PROJECTS PAGE 
+
+
+*/                     
+
+/* Nav for projects */
 .projNav {
     width: 60%;
     margin: 2% 20%;
     padding: 1.5% 0;
 }
 
+/* links in project nav, for spacing */
 .projLink {
     padding: 25px 50px;
     margin: 2% 0;
     color: black;
 }
 
+/* When hovering, text underlines and changes color */
 .projLink:hover {
     color: #0C6B3B;
     text-decoration: underline;
 }
 
+/* Grid of images of projects aligned with flexbox */
 .projectsGrid {
     display: flex;
     flex-wrap: wrap;
@@ -142,10 +229,11 @@ footer > a {
     align-items: center;
 }
 
-/* */
+/* Image sizing and spacing for projects */
 .projImg {
     width: 300px;
     margin: 2% 2%;
+    padding: 0 20px;
 }
 
 /* Suddle growing for hovering over images on projects page*/
@@ -153,8 +241,140 @@ footer > a {
     transform: scale(1.1);
 }
 
-.imgLink {
-    margin: 0;
-    padding: 0 20px;
+.design, .js, .html {
+    display: block;
+}
 
+/*
+
+    ABOUT PAGE
+
+*/
+
+/* Spacing for about paragraphs */
+.aboutPara {
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    margin: 0 3%;
+}
+
+/*
+
+
+    PROJECT PAGES
+
+
+*/
+
+.backToProjLink {
+    color: #0C6B3B;
+    font-size: 18px;
+}
+
+.backToProjLink:visited {
+    color: #0C6B3B;
+}
+
+.backToProjLink:hover {
+    text-decoration: underline;
+}
+
+#vertical {
+    margin-right: 5%;
+    width: 70%;
+    height: 70%;
+}
+
+#alumni {
+    width: 85%;
+    margin-left: 7.5%;
+}
+
+.underneathPara {
+    width: 50%;
+    margin-left: 30%;
+}
+
+/*
+
+
+    RESUME PAGE
+
+
+*/
+@page {
+    size: 5.5in 8.5in;
+}
+
+/*
+
+
+    CONTACT PAGE
+
+
+*/
+
+form {
+    width: 40%;
+    padding: 2em;
+    display: block;
+    border-radius: 1em;
+}
+
+.formInput {
+    margin: 30px 0 0 10%;
+}
+
+
+form div + div {
+    margin-top: 1em;
+}
+
+input, textarea {
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    /* https://www.w3schools.com/css/css3_shadows.asp */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #DC655C;
+}
+
+textarea {
+    vertical-align: top;
+    height: 10em;
+    font-family: 'Mako', sans-serif;
+
+}
+
+button {
+    width: 200px;
+    margin-left: 25%;
+    border: none;
+    padding: 1em;
+    margin-top: 30px;
+    color: white;
+    background-color: gray;
+    border-radius: 1em;
+    /* https://www.w3schools.com/css/css3_shadows.asp */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: #DC655C;
+}
+
+#contactInfo {
+    width: 60%;
+}
+
+#contactInfo > p {
+    margin: 2em 0 2em 20%;
 }
