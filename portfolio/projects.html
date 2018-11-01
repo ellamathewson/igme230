@@ -39,25 +39,34 @@
         </nav>
 
         <nav class="projNav">
-            <a class="projLink" id="all" onclick="filterProjects(this.id)">All</a>
-            <a class="projLink" id="cSharp" onclick="filterProjects(this.id)">C#</a>
-            <a class="projLink" id="design" onclick="filterProjects(this.id)">Design</a>
-            <a class="projLink" id="htmlCSS" onclick="filterProjects(this.id)">HTML and CSS</a>
-            <a class="projLink" id="javascript" onclick="filterProjects(this.id)">JavaScript</a>
+            <a class="projLink" id="allLink" onclick="filterProjects(this.id)">All</a>
+            <a class="projLink" id="cSharpLink" onclick="filterProjects(this.id)">C#</a>
+            <a class="projLink" id="designLink" onclick="filterProjects(this.id)">Design</a>
+            <a class="projLink" id="htmlLink" onclick="filterProjects(this.id)">HTML and CSS</a>
+            <a class="projLink" id="jsLink" onclick="filterProjects(this.id)">JavaScript</a>
         </nav>
 
         <div class="projectsGrid">
-
-            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img
-                    class="projImg" src="media/alumniLogo.png"></a>
-            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg"
-                    src="media/boogieLogo.png"></a>
-            <a class="js" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg"
-                    src="media/huegridLogo.png"></a>
-            <a class="html" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg"
-                    src="media/wearableLogo.png"></a>
-            <a class="design" href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img
-                    class="projImg" src="media/tennisLogo.png"></a>
+            <div id="design1">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/alumniPosters.html"><img class="projImg"
+                        src="media/alumniLogo.png"></a>
+            </div>
+            <div id="js1">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/boogieWorms.html"><img class="projImg"
+                        src="media/boogieLogo.png"></a>
+            </div>
+            <div id="js2">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/huegrid.html"><img class="projImg"
+                        src="media/huegridLogo.png"></a>
+            </div>
+            <div id="html1">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/wearable.html"><img class="projImg"
+                        src="media/wearableLogo.png"></a>
+            </div>
+            <div id="design2">
+                <a href="https://ellamathewson.github.io/igme230/portfolio/projectPages/tennisPoster.html"><img class="projImg"
+                        src="media/tennisLogo.png"></a>
+            </div>
 
         </div>
 
@@ -98,39 +107,62 @@
         */
 
         function filterProjects(buttonID) {
-            /*let buttonClicked = buttonID;
+            let buttonClicked = buttonID;
 
             console.log(buttonClicked);
-            if (buttonClicked == "design") {
-                displayProjects("design");
-                hideProjects("js");
-                hideProjects("html");
+
+            if (buttonClicked == "allLink") {
+                displayProjects("design1");
+                displayProjects("design2");
+                displayProjects("js1");
+                displayProjects("js2");
+                displayProjects("html1");
             }
-            else if (buttonClicked == "html") {
-                displayProjects("html");
-                hideProjects("js");
-                hideProjects("design");
+            else if (buttonClicked == "cSharpLink") {
+                hideProjects("design1");
+                hideProjects("design2");
+                hideProjects("js1");
+                hideProjects("js2");
+                hideProjects("html1");
             }
-            else if (buttonClicked == "js") {
-                displayProjects("js");
-                hideProjects("design");
-                hideProjects("html");
-            }*/
+            else if (buttonClicked == "designLink") {
+                displayProjects("design1");
+                displayProjects("design2");
+                hideProjects("js1");
+                hideProjects("js2");
+                hideProjects("html1");
+            }
+            else if (buttonClicked == "htmlLink") {
+                hideProjects("design1");
+                hideProjects("design2");
+                hideProjects("js1");
+                hideProjects("js2");
+                displayProjects("html1");
+            }
+            else if (buttonClicked == "jsLink") {
+                hideProjects("design1");
+                hideProjects("design2");
+                displayProjects("js1");
+                displayProjects("js2");
+                hideProjects("html1");
+            }
         }
 
         function displayProjects(projID) {
-            document.getElementById(projID).style.display = "none";
-            console.log(projID);
+            document.getElementById(projID).style.display = 'block';
         }
 
         function hideProjects(projID) {
-            document.getElementById(projID).style.display = "inline";
+            document.getElementById(projID).style.display = 'none';
         }
 
-                function dropdown() {
+
+        //function for toggling the dropdown menu on nav bar
+        function dropdown() {
             document.getElementById("projDropdown").classList.toggle("show");
         }
 
+        //when viewing the dropdown menu, if the user clicks off the page, the dropdown menu will hide
         window.onclick = function (event) {
             if (!event.target.matches('.navLink')) {
                 var dropdowns = document.getElementsByClassName("dropdownContent");
@@ -148,3 +180,13 @@
 </body>
 
 </html>
+
+<!--
+
+document.getElementById("design1").style.display = 'block';
+                document.getElementById("design2").style.display = 'block'
+                document.getElementById("html1").style.display = 'none';
+                document.getElementById("js1").style.display = 'none';
+                document.getElementById("js2").style.display = 'none';
+
+-->
