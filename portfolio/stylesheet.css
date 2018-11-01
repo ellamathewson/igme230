@@ -116,9 +116,15 @@ h2 {
     color: black;
 }
 
-#proj:active, #proj:hover {
+#proj:active, #proj:hover, #proj:visited {
     color: white;
     background-color: #0C6B3B;
+}
+
+
+
+.show {
+    display: block;
 }
 
 /* 
