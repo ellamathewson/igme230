@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>Google Maps API Example</title>
 
-  <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=INSERT-YOUR-API-KEY-HERE"></script>
-
+  <!-- Link so we can have access to the various objects and methods it provides -->
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyC1QUsSq3K3lNhCiW9vy864hg3pn0HKkIw"></script>
   <script>
     "use strict";
     if ("geolocation" in navigator) {   // check to see if the user allowed location access
@@ -27,6 +27,24 @@
 
         // create a new map with the specified options (uses deprecated getElementByID; could use querySelector instead)
         var myMap = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        //declaring variable for creating a map marker on the screen
+        var myMarker = new google.maps.Marker({
+          position: latlng,
+          icon: "baseline-directions_walk-24px.svg", //changes the icon to the walking man
+          map: myMap
+        });
+        //Variable that holds the content to be displayed in the popup
+        var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">I Did It!</h2><p>This is my very own custom info window.</p></div>';
+        //variable for the info window
+        var myInfowindow = new google.maps.InfoWindow({
+          //sends in the content to the window
+          content: contentString
+        });
+        //on click, the window appears
+        myMarker.addListener('click', function () {
+          myInfowindow.open(myMap, myMarker);
+        });
+
 
       });
 
@@ -35,6 +53,8 @@
       para.innerHTML = 'Argh, no geolocation!';
       document.body.appendChild(para);
     }
+
+
 
   </script>
   <style>
