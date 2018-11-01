@@ -46,6 +46,13 @@ window.onclick = function (event) {
         }
     }
 }
+/*
+
+
+    NAV BAR FOR PORJECTS PAGE
+
+
+*/
 
 /*
 https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button
