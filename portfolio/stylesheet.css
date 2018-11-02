@@ -62,14 +62,14 @@ h2 {
 /* Nav bar text color and spacing across page */
 .navLink {
     color: #0C6B3B;
-    padding: 25px 30px;
+    padding: 25px 25px;
     margin: 2% 0;
 
 }
 
 /* Puts 'EM' in top left corner */
 #logo {
-    margin-right: 55%;
+    margin-right: 60%;
 }
 
 /* When mouse hovers over it, changes background color */
@@ -83,6 +83,11 @@ h2 {
 .navLink:active {
     background-color: #DC655C;
     color: white;
+}
+
+/* Used for when the screen is collapsed */
+.hamburgerIcon {
+    display: none;
 }
 
 /* 
@@ -388,3 +393,48 @@ SCREEN SIZING
 
 
 */
+@media screen and (max-width: 1395px) {
+    #logo {
+        margin-right: 55%;
+    }
+
+    .aboutImg {
+        padding: 2% 0;
+    }
+
+    .sideBySide {
+        flex-direction: column;
+    }
+
+    #aboutReverse {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    #logo {
+        margin-right: 45%;
+    }
+}
+
+@media screen and (max-width: 1021px) {
+    #logo {
+        margin-right: 35%;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    #logo {
+        margin-right: 45%;
+    }
+
+    .hamburgerIcon {
+        display: block;
+        float: right;
+        font-size: 20px;
+    }
+
+    .responsiveDropdown {
+        display: none;
+    }
+}

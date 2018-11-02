@@ -18,11 +18,15 @@
     <div class="mainContent">
 
         <nav>
-                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="projects">Projects</a>
-                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
-                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
-                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>        </nav>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
+                <div class="responsiveDropdown">
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="projects">Projects</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
+                </div>
+            <a class="hamburgerIcon" onclick="dropdown()"><i class="fa fa-bars" aria-hidden="true"></i></a>        
+        </nav>
 
         <div class="sideBySide">
             <img class="aboutImg" src="media/aboutPic1Resize.jpg">
@@ -41,7 +45,7 @@
             </p>
         </div>
 
-        <div class="sideBySide">
+        <div class="sideBySide" id="aboutReverse">
             <p class="aboutPara">
                 Outside of academics, I play tennis through the RIT Tennis Club, which I also help run as vice-president. I'm also a member
                 of a volunteer organization called Momentum, where I learn leadership skills as well as volunteer in the
