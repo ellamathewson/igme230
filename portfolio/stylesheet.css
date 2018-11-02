@@ -62,14 +62,14 @@ h2 {
 /* Nav bar text color and spacing across page */
 .navLink {
     color: #0C6B3B;
-    padding: 25px 50px;
+    padding: 25px 30px;
     margin: 2% 0;
 
 }
 
 /* Puts 'EM' in top left corner */
 #logo {
-    margin-right: 44%;
+    margin-right: 55%;
 }
 
 /* When mouse hovers over it, changes background color */
@@ -380,3 +380,11 @@ button:hover {
 #contactInfo > p {
     margin: 2em 0 2em 20%;
 }
+
+/*
+
+
+SCREEN SIZING
+
+
+*/
