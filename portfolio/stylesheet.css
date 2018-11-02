@@ -434,7 +434,12 @@ SCREEN SIZING
         font-size: 20px;
     }
 
-    .responsiveDropdown {
+    .dropdownContent {
         display: none;
+        position: absolute;
+    }
+
+    .show {
+        display: block;
     }
 }

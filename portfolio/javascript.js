@@ -99,7 +99,3 @@ function displayProjects(projID) {
 function hideProjects(projID) {
     document.getElementById(projID).style.display = 'none';
 }
-
-function dropdown() {
-    
-}
