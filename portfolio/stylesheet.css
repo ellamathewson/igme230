@@ -157,6 +157,9 @@ footer > p {
     color: black;
 }
 
+.footerCursor {
+    cursor: context-menu;
+}
 
 
 
