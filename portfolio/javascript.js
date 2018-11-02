@@ -8,7 +8,7 @@
 
 /* Code based off of tutorial on w3 Schools:
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr
-*/
+
 var myIndex = 0;
 
 function dropdown() {
@@ -24,6 +24,15 @@ window.onclick = function (event) {
                 openDropdown.classList.remove('show');
             }
         }
+    }
+}*/
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
     }
 }
 /*

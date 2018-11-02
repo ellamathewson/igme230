@@ -18,6 +18,10 @@ nav {
     padding: 1.5% 0;
 }
 
+.dropdownContent {
+    float: right;
+}
+
 a {
     text-decoration: none;
     font-size: 16px;
@@ -64,7 +68,6 @@ h2 {
     color: #0C6B3B;
     padding: 25px 25px;
     margin: 2% 0;
-
 }
 
 /* Puts 'EM' in top left corner */
@@ -85,51 +88,15 @@ h2 {
     color: white;
 }
 
-/* Used for when the screen is collapsed */
-.hamburgerIcon {
-    display: none;
-}
-
 /* 
     DROPDOWN MENU: code based off this tutorial:
     https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
 
 */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdownContent {
+#ham {
     display: none;
-    position: absolute;
-    background-color: lightgray;
-    min-width: 160px;
-    overflow: auto;
-    z-index: 1;
-}
-
-.dropdownContent a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-#proj {
-    color: black;
-}
-
-#proj:active, #proj:hover, #proj:visited {
-    color: white;
-    background-color: #0C6B3B;
-}
-
-
-
-.show {
-    display: block;
+    float: right;
+    margin-top: -25px;
 }
 
 /* 
@@ -386,6 +353,7 @@ button:hover {
     margin: 2em 0 2em 20%;
 }
 
+
 /*
 
 
@@ -421,25 +389,29 @@ SCREEN SIZING
     #logo {
         margin-right: 35%;
     }
+
+    footer {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 865px) {
+/* Smallest size, when hamburger menu pops up*/
+@media screen and (max-width: 880px) {
     #logo {
-        margin-right: 45%;
+        margin-right: 35%;
     }
 
-    .hamburgerIcon {
+    #ham {
         display: block;
-        float: right;
-        font-size: 20px;
+
     }
 
     .dropdownContent {
         display: none;
-        position: absolute;
     }
 
-    .show {
-        display: block;
+    .aboutImg {
+        width: 100%;
+        height: auto;
     }
 }
