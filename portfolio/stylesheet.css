@@ -471,9 +471,7 @@ SCREEN SIZING
 
 */
 @media screen and (max-width: 1395px) {
-    #logo {
-        margin-right: 55%;
-    }
+
 
     .aboutImg {
         padding: 2% 0;
@@ -499,12 +497,13 @@ SCREEN SIZING
         width: 100%;
         height: auto;
     }
+    form {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 1240px) {
-    #logo {
-        margin-right: 45%;
-    }
+
     .dropdown {
         display: none;
     }
@@ -514,9 +513,7 @@ SCREEN SIZING
 }
 
 @media screen and (max-width: 1021px) {
-    #logo {
-        margin-right: 35%;
-    }
+
 
     footer {
         display: none;
@@ -528,13 +525,14 @@ SCREEN SIZING
     .hiddenNav {
         float: right;
     }
+    form {
+        width: 60%;
+    }
 }
 
 /* Smallest size, when hamburger menu pops up*/
 @media screen and (max-width: 880px) {
-    #logo {
-        margin-right: 35%;
-    }
+
 
     .hiddenNav {
         display: none;
@@ -547,5 +545,8 @@ SCREEN SIZING
     .aboutImg, .home {
         width: 100%;
         height: auto;
+    }
+    form {
+        width: 100%;
     }
 }
