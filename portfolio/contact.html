@@ -18,14 +18,22 @@
     <div class="mainContent">
         <nav>
             <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" id="logo">EM</a>
-            <div class="dropdownContent">
+            <div class="hiddenNav">
                 <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="projects">Projects</a>
                 <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
                 <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
                 <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
             </div>
-            <a class="navLink" id="ham"><i class="fa fa-bars" aria-hidden="true"></i></a>
 
+            <div class="dropdown">
+                <button onclick="dropdown()" class="hamButton"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <div id="myDropdown" class="dropdownContent">
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Projects</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html">About</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html">Resume</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html">Contact</a>
+                </div>
+            </div>
         </nav>
 
         <div class="sideBySide">
