@@ -7,7 +7,6 @@
 */
 function dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
-    console.log("drop down works im just a little slut");
 }
 
 window.onclick = function(e) {

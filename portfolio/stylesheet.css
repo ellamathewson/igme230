@@ -85,45 +85,50 @@ h2 {
 }
 
 /* 
+
     DROPDOWN MENU: code based off this tutorial:
-    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
+
 
 */
 .hamButton {
-    background-color: black;
-    color: white;
+    background-color: white;
     padding: 16px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
+    float: right;
+    margin-top: -37px;
 }
 
-.hamButton:focus, .hamButton:hover {
-    background-color: gray;
+.hamButton:hover {
+    background-color: #0C6B3B;
 }
 
 .dropdown {
-    position: relative;
     display: block;
 }
 
 .dropdownContent {
     display: none;
-    position: absolute;
-    background-color: pink;
+    float: right;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: -45px;
+    background-color: #0C6B3B;
     min-width: 160px;
     z-index: 1;
 }
 
 .dropdownContent a {
-    color: black;
-    padding: 12px;
+    color: white;
+    padding: 18px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown a:hover {
-    background-color: pink;
+    background-color: #DC655C;
 }
 
 .show {
