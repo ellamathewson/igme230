@@ -7,25 +7,13 @@
 */
 
 /* Code based off of tutorial on w3 Schools:
-https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr */
 
 var myIndex = 0;
 
-function dropdown() {
-    document.getElementById("projDropdown").classList.toggle("show");
-}
 
-window.onclick = function (event) {
-    if (!event.target.matches('.navLink')) {
-        var dropdowns = document.getElementsByClassName("dropdownContent");
-        for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}*/
+
+
 
 function myFunction() {
     var x = document.getElementById("myTopnav");

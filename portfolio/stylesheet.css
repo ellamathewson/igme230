@@ -18,10 +18,6 @@ nav {
     padding: 1.5% 0;
 }
 
-.dropdownContent {
-    float: right;
-}
-
 a {
     text-decoration: none;
     font-size: 16px;
@@ -93,10 +89,45 @@ h2 {
     https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
 
 */
-#ham {
+.hamButton {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.hamButton:focus, .hamButton:hover {
+    background-color: gray;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdownContent {
     display: none;
-    float: right;
-    margin-top: -25px;
+    position: absolute;
+    background-color: pink;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdownContent a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: pink;
+}
+
+.show {
+    display: block;
 }
 
 /* 
@@ -325,7 +356,7 @@ textarea {
 
 }
 
-button {
+.submitButton {
     width: 200px;
     margin-left: 25%;
     border: none;
@@ -339,7 +370,7 @@ button {
 
 }
 
-button:hover {
+.submitButton:hover {
     text-decoration: underline;
     cursor: pointer;
     background-color: #DC655C;
@@ -401,12 +432,7 @@ SCREEN SIZING
         margin-right: 35%;
     }
 
-    #ham {
-        display: block;
-
-    }
-
-    .dropdownContent {
+    .hiddenNav {
         display: none;
     }
 
