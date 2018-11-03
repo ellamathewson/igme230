@@ -41,7 +41,7 @@
         </nav>
 
         <div class="sideBySide">
-            <img alt="A picture of me at an apple orchard" src="media/homePicResize.jpg">
+            <img class="homeImg" alt="A picture of me at an apple orchard" src="media/homePicResize.jpg">
             <h2 class="introPara">Hello! I'm Ella. I'm a current New Media Interactive Development student who uses both
                 coding and design to create interactive programs
             </h2>
@@ -58,9 +58,9 @@
                 The levels increase in difficulty and the challenges change every 5 levels.
             </p>
 
-            <img class="slideShow" src="media/boogieHomeResize.png">
-            <img class="slideShow" src="media/boogielogoResized.jpg">
-            <img class="slideShow" src="media/boogieLevel2Resize.png">
+            <img class="slideShow" src="media/slideshow1.png">
+            <img class="slideShow" src="media/slideshow2.png">
+            <img class="slideShow" src="media/slideshow3.png">
 
         </article>
         <!--
@@ -84,6 +84,7 @@
     <script>
         onPage();
 
+        var myIndex = 0;
         slideshow();
 
         function slideshow() {
