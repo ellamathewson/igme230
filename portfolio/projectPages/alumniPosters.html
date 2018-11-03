@@ -18,25 +18,35 @@
     <div class="mainContent">
 
         <nav>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://google.com" class="link" id="proj">Projects</a>
-            <a class="navLink" href="https://google.com" class="link" id="about">About</a>
-            <a class="navLink" href="https://google.com" class="link">Resume</a>
-            <a class="navLink" href="https://google.com" class="link">Contact</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" id="logo">EM</a>
+            <div class="hiddenNav">
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="projects">Projects</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdown()" class="hamButton"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <div id="myDropdown" class="dropdownContent">
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Projects</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html">About</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html">Resume</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html">Contact</a>
+                </div>
+            </div>
         </nav>
 
         <h3 id="alumniHeader">Alumni Posters</h3>
 
         <div class="sideBySide" id="alumni">
             <img id="vertical" src="projectImages/alumniPoster.png">
-            <p class="aboutPara">This poster was designed for RIT's Women in Computing club. Working with a 
-                few other members on the Public Relations committee, we designed a series of 
-                informational posters about RIT Alumni who were in the club.
-                <br><br>
-                It includes information about who they are, what they've been up to since 
-                graduating, and where they are currently worknig. The reason behind the poster 
-                design was to promote the club as well as show women in technology different paths
-                previous graduates have taken. You can find more 
+            <p class="aboutPara">This poster was designed for RIT's Women in Computing club. Working with a few other members
+                on the Public Relations committee, we designed a series of informational posters about RIT Alumni who were
+                in the club.
+                <br><br> It includes information about who they are, what they've been up to since graduating, and where
+                they are currently worknig. The reason behind the poster design was to promote the club as well as show women
+                in technology different paths previous graduates have taken. You can find more
                 <a href="http://wic.rit.edu/alumni.php" target="_blank">here</a>.
                 <br><br>
                 <a class="backToProjLink" href="https://google.com">Back to Projects</a>
