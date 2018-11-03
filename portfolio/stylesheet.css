@@ -471,8 +471,6 @@ SCREEN SIZING
 
 */
 @media screen and (max-width: 1395px) {
-
-
     .aboutImg {
         padding: 2% 0;
     }
@@ -503,7 +501,6 @@ SCREEN SIZING
 }
 
 @media screen and (max-width: 1240px) {
-
     .dropdown {
         display: none;
     }
@@ -513,8 +510,6 @@ SCREEN SIZING
 }
 
 @media screen and (max-width: 1021px) {
-
-
     footer {
         display: none;
     }
@@ -532,8 +527,6 @@ SCREEN SIZING
 
 /* Smallest size, when hamburger menu pops up*/
 @media screen and (max-width: 880px) {
-
-
     .hiddenNav {
         display: none;
     }
