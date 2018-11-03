@@ -44,7 +44,10 @@ h2 {
     color: #0C6B3B;
     font-size: 22px;
     line-height: 2em;
+}
 
+h4 {
+    color: blue;
 }
 
 /* Used for elements that are next to each other; 
