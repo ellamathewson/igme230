@@ -84,6 +84,10 @@ h2 {
     color: white;
 }
 
+.hiddenNav {
+    float: right;
+}
+
 /* 
 
     DROPDOWN MENU: code based off this tutorial:
@@ -98,7 +102,7 @@ h2 {
     border: none;
     cursor: pointer;
     float: right;
-    margin-top: -37px;
+    margin-top: -5%;
 }
 
 .hamButton:hover {
@@ -106,18 +110,17 @@ h2 {
 }
 
 .dropdown {
-    display: block;
+    display: none;
+    float: right;
+    width: 100%;
 }
 
 .dropdownContent {
     display: none;
-    float: right;
-    text-align: center;
-    margin-top: 15px;
-    margin-right: -45px;
     background-color: #0C6B3B;
-    min-width: 160px;
     z-index: 1;
+    position: relative;
+    margin-top: 2%;
 }
 
 .dropdownContent a {
@@ -269,6 +272,10 @@ hr {
     margin: 0 3%;
 }
 
+.aboutImg {
+    position: relative;
+}
+
 /*
 
 
@@ -413,11 +420,25 @@ SCREEN SIZING
     #aboutReverse {
         flex-direction: column-reverse;
     }
+
+    .dropdown {
+        display: none;
+    }
+
+    .hiddenNav {
+        float: right;
+    }
 }
 
 @media screen and (max-width: 1240px) {
     #logo {
         margin-right: 45%;
+    }
+    .dropdown {
+        display: none;
+    }
+    .hiddenNav {
+        float: right;
     }
 }
 
@@ -429,6 +450,13 @@ SCREEN SIZING
     footer {
         display: none;
     }
+
+    .dropdown {
+        display: none;
+    }
+    .hiddenNav {
+        float: right;
+    }
 }
 
 /* Smallest size, when hamburger menu pops up*/
@@ -439,6 +467,10 @@ SCREEN SIZING
 
     .hiddenNav {
         display: none;
+    }
+
+    .dropdown {
+        display: block;
     }
 
     .aboutImg {
