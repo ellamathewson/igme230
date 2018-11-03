@@ -14,7 +14,6 @@
     line-height: 1.5em;
     font-size: 18px;
 }
-
 nav {
     width: 100%;
     margin: 2% 0;
@@ -226,13 +225,13 @@ hr {
     width: 50%;
 }
 
-#toProject {
+.toProject, .toProject:visited {
     text-decoration: none;
     font-size: 18px;
     color: #0C6B3B;
 }
 
-#toProject:hover {
+.toProject:hover {
     text-decoration: underline;
     color: #DC655C;
 }
