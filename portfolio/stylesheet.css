@@ -247,9 +247,10 @@ hr {
 
 /* Nav for projects */
 .projNav {
-    width: 60%;
-    margin: 2% 20%;
-    padding: 1.5% 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* links in project nav, for spacing */
