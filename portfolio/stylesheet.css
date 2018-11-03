@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Mako');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
 
 /*
 
@@ -8,7 +10,8 @@
 .mainContent {
     width: 90%;
     margin: 0 5%;
-    font-family: 'Mako', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 1.5em;
     font-size: 18px;
 }
 
@@ -32,12 +35,16 @@ h3 {
     margin-left: 47%;
     color: #0C6B3B;
     font-size: 22px;
+    line-height: 2em;
+
 }
 
 h2 {
     margin-left: 40%;
     color: #0C6B3B;
     font-size: 22px;
+    line-height: 2em;
+
 }
 
 /* Used for elements that are next to each other; 
@@ -183,11 +190,17 @@ footer > p {
 */
 
 /* Code for info paragraph at top of home page */
-.introPara {
+#introName {
     width: 80%;
+    text-align: center;
     margin-left: 10%;
     font-size: 30px;
-    color: #0C6B3B
+    color: #DC655C
+}
+
+#changeColor {
+    color: #0C6B3B;
+    margin: 0;
 }
 
 /* Dividing line between home info and project preview */
@@ -206,6 +219,18 @@ hr {
 /* Class for slideshow on home page */
 .slideShow {
     display: none;
+    width: 50%;
+}
+
+#toProject {
+    text-decoration: none;
+    font-size: 18px;
+    color: #0C6B3B;
+}
+
+#toProject:hover {
+    text-decoration: underline;
+    color: #DC655C;
 }
 
 /*                      
