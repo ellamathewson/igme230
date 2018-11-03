@@ -32,7 +32,8 @@ a:visited {
 
 /* Used for headers on pages */
 h3 {
-    margin-left: 47%;
+    width: 100%;
+    text-align: center;
     color: #0C6B3B;
     font-size: 22px;
     line-height: 2em;
