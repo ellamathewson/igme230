@@ -207,7 +207,7 @@ footer > p {
 */
 
 /* Code for name at top of home page */
-#introName {
+#introName, #introAbout {
     width: 80%;
     text-align: center;
     margin-left: 10%;
