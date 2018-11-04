@@ -63,6 +63,11 @@ h4 {
     margin: 5% 0 5% 15%;
 }
 
+/* Removes bullet points*/
+ul {
+    list-style-type: none;
+}
+
 /* 
 
 
