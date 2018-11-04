@@ -45,7 +45,7 @@ h2 {
 }
 
 h4 {
-    color: blue;
+    color: #DC655C;
 }
 
 /* Used for elements that are next to each other; 
@@ -223,13 +223,13 @@ hr {
     width: 50%;
 }
 
-.toProject, .toProject:visited {
+.toProject, .toProject:visited, .toSource, .toSource:visited {
     text-decoration: none;
     font-size: 18px;
     color: #0C6B3B;
 }
 
-.toProject:hover {
+.toProject:hover, .toSource:hover {
     text-decoration: underline;
     color: #DC655C;
 }
@@ -516,6 +516,21 @@ textarea {
 
 #contactInfo > p {
     margin: 2em 0 2em 20%;
+}
+/*
+
+
+    DOCUMENTATION PAGE
+
+
+*/
+#docContent {
+    width: 75%;
+    margin: 0 12.5%;
+}
+
+#docContent ul {
+    text-indent: 0;
 }
 
 /*
