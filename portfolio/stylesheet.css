@@ -416,7 +416,6 @@ ul {
 
 /* Also for printing, changes size of page and margins*/
 @page {
-    size: 8.5in 11in;
     margin: 1.1cm;
 }
 
