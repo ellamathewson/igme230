@@ -2,9 +2,12 @@
 
 /*
 
+
     CSS ON EVERY PAGE
 
+
 */
+/* Container for main content on every page. Sets width so there is a bit of margin on the pages and formats the text */
 .mainContent {
     width: 90%;
     margin: 0 5%;
@@ -12,17 +15,18 @@
     line-height: 1.5em;
     font-size: 18px;
 }
+/* Container for nav bar at the top of every page. Takes up entire width of page */
 nav {
     width: 100%;
     margin: 2% 0;
     padding: 1.5% 0;
 }
-
+/* Removes line from under links, and sets font size*/
 a {
     text-decoration: none;
     font-size: 16px;
 }
-
+/* Sets the color of links if they have already been clicked on */
 a:visited {
     color: black;
 }
@@ -36,20 +40,20 @@ h3 {
     line-height: 2em;
 
 }
-
+/* Header used in situations where the width cannot be 100% like an h3 */
 h2 {
     margin-left: 40%;
     color: #0C6B3B;
     font-size: 22px;
     line-height: 2em;
 }
-
+/* Used for Resume and Documentation pages */
 h4 {
     color: #DC655C;
 }
 
 /* Used for elements that are next to each other; 
-    on home and about pages */
+    on home and about pages. Uses flexbox so the elements are displayed side by side and spaced accordingly. */
 .sideBySide {
     width: 75%;
     display: flex;
@@ -67,44 +71,49 @@ h4 {
 
 */
 
-/* Nav bar text color and spacing across page */
+/* Nav bar links, changes text color and spacing across the page */
 .navLink {
     color: #0C6B3B;
     padding: 25px 25px;
     margin: 2% 0;
 }
 
-/* Puts 'EM' in top left corner */
+/* Puts 'EM' in top left corner  */
 #logo {
     margin-right: 60%;
 }
 
-/* When mouse hovers over it, changes background color */
+/* When mouse hovers over a link in nav bar, changes background color */
 .navLink:hover {
     background-color: #0C6B3B;
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* When clicked, background color changes to show user they have clicked*/
+/* When clicked, background color changes to show user they have clicked */
 .navLink:active {
     background-color: #DC655C;
     color: white;
 }
 
+/* For dropdown menu, the nav bar that drops down is hidden until the page size gets below a certian point */
 .hiddenNav {
     float: right;
 }
 
 /* 
 
-    DROPDOWN MENU: code based off this tutorial from W3 Schools:
+    DROPDOWN MENU
+
+    Code based off this tutorial from W3 Schools:
     https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
 
     Responsive dropdown based off this tutorial from W3 Schools:
     https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_responsive_navbar_dropdown
 
+
 */
+/* Hamburger button at top right of page (when resized) */
 .hamButton {
     background-color: white;
     padding: 16px;
@@ -115,16 +124,19 @@ h4 {
     margin-top: -5%;
 }
 
+/* When hovering over it, a background-color appears similar to any other nav link */
 .hamButton:hover {
     background-color: #0C6B3B;
 }
 
+/* Container for the entire dropdown menu, hidden in screen until resized */
 .dropdown {
     display: none;
     float: right;
     width: 100%;
 }
 
+/* Links in dropdown nav bar are also hidden, puts them in top right like the hamburger menu icon */
 .dropdownContent {
     display: none;
     background-color: #0C6B3B;
@@ -133,6 +145,7 @@ h4 {
     margin-top: 2%;
 }
 
+/* Changes the coloring and look of the links in the dropdown menu */
 .dropdownContent a {
     color: white;
     padding: 18px;
@@ -140,10 +153,12 @@ h4 {
     display: block;
 }
 
-.dropdown a:hover {
+/* When hovering over dropdown menu link or clicking on dropdown menu link*/
+.dropdown a:hover, .dropdown a:active {
     background-color: #DC655C;
 }
 
+/* Used to display dropdown menu, called in JavaScript */
 .show {
     display: block;
 }
@@ -178,19 +193,20 @@ footer > p {
     color: black;
 }
 
+/* Changes cursor to a mouse when hovering over email in footer */
 .footerCursor {
     cursor: context-menu;
 }
 
-
-
 /* 
+
 
     HOME PAGE
 
+
 */
 
-/* Code for info paragraph at top of home page */
+/* Code for name at top of home page */
 #introName {
     width: 80%;
     text-align: center;
@@ -199,6 +215,7 @@ footer > p {
     color: #DC655C
 }
 
+/* Changes color of description on home page */
 #changeColor {
     color: #0C6B3B;
     margin: 0;
@@ -210,7 +227,7 @@ hr {
     background-color: rgb(22, 165, 93);
 }
 
-/* Paragraph about project hilighted on home page*/
+/* Paragraph about most recent project on home page*/
 #aboutParaHome {
     width: 40%;
     font-size: 18px;
@@ -223,12 +240,14 @@ hr {
     width: 50%;
 }
 
+/* Link on home page that links to most recent project, as well as the links for the documentation page */
 .toProject, .toProject:visited, .toSource, .toSource:visited {
     text-decoration: none;
     font-size: 18px;
     color: #0C6B3B;
 }
 
+/* When hovering over these links that are between text on the page, the color changes*/
 .toProject:hover, .toSource:hover {
     text-decoration: underline;
     color: #DC655C;
@@ -242,7 +261,7 @@ hr {
 
 */                     
 
-/* Nav for projects */
+/* Nav for projects, implements flexbox to display all of the projects*/
 .projNav {
     display: flex;
     width: 100%;
@@ -283,6 +302,7 @@ hr {
     transform: scale(1.1);
 }
 
+/* Classes call specific projects, used for the project nav bar when sorting them */
 .design, .js, .html {
     display: block;
 }
@@ -294,11 +314,14 @@ hr {
 
 
 */
+
+/* Container for resume content */
 #resumeContainer {
     width: 80%;
     margin: 0 10%;
 }
 
+/* Using flexbox, formatting the basic information at top of resume to be side by side */
 #resumeTopInfo {
     display: flex;
     flex-direction: row;
@@ -306,10 +329,12 @@ hr {
     justify-content: center;
 }
 
+/* Individual elements in the resume top info, spaced out */
 .resumeTop {
     padding: 0 20px 0 20px;
 }
 
+/* h2 used on the resume page */
 #resumeH2 {
     margin-left: 45%;
     color: #DC655C;
@@ -317,19 +342,14 @@ hr {
     line-height: 2em;
 }
 
+/* p tags on the resume page are indented */
 #resumeContent p {
     text-indent: 50px;
 }
 
+/* ul tags on resume page are indented*/
 ul {
     text-indent: 100px;
-}
-
-.sideBySideResume {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    line-height: 5px;
 }
 
 /*
@@ -339,10 +359,14 @@ ul {
 
 
 */
+
+/* When printing, changes CSS so page is able to be formatted */
 @media print {
+    /* Gets rid of nav and footer on page */
     nav, footer {
         display: none;
     }
+    /* Changes sizing and spacing of text to be ideal for print */
     .mainContent {
         font-size: 12pt;
         font-family: 'Times New Roman', Times, serif;
@@ -350,15 +374,18 @@ ul {
         margin: 0;
         padding: 0;
     }
+    /* Resizes header */
     #resumeH2 {
         font-size: 20pt;
         margin: 0;
         text-align: left;
     }
+    /* Changes width of content on the page */
     #resumeContainer {
         width: 100%;
-        margin: none;
+        margin: 0;
     }
+    /* Decreases the text indent for content on page*/
     #resumeContent p {
         text-indent: 0.25cm;
     }
@@ -368,21 +395,21 @@ ul {
     h4 {
         font-size: 14pt;
     }
+    /* Changes direction of flex*/
     #resumeTopInfo {
-        display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
     }
+    /* Changes link color */
     .toProject, .toProject:visited {
         color: black;
     }
     p a:after {
-        color: blue;
+        color: black;
         content: " (source:  https://ellamathewson.github.io/igme230/portfolio/index.html)";
     }
 }
 
+/* Also for printing, changes size of page and margins*/
 @page {
     size: 8.5in 11in;
     margin: 1.1cm;
@@ -391,7 +418,9 @@ ul {
 
 /*
 
+
     ABOUT PAGE
+
 
 */
 
@@ -403,6 +432,7 @@ ul {
     margin: 0 3%;
 }
 
+/* Used for dropdown menu displaying over the image instaed of the image being displayed over dropdown menu*/
 .aboutImg {
     position: relative;
 }
@@ -415,35 +445,40 @@ ul {
 
 */
 
+/* Link at bottom of every project page that takes user back to projects*/
 .backToProjLink {
     color: #0C6B3B;
     font-size: 18px;
 }
 
+/* Keeps the color the same even if the user has visited it */
 .backToProjLink:visited {
     color: #0C6B3B;
 }
 
+/* Underlines text when hovering*/
 .backToProjLink:hover {
     text-decoration: underline;
 }
 
+/* Used for images that are vertical on the page (alumni poster) */
 #vertical {
     margin-right: 5%;
     width: 70%;
     height: 70%;
 }
 
+/* Spacing specificially for alumni page */
 #alumni {
     width: 85%;
     margin-left: 7.5%;
 }
 
+/* Used for images that are wider on the page (boogie worms, wearable devices) */
 .underneathPara {
     width: 50%;
     margin-left: 30%;
 }
-
 
 /*
 
@@ -453,6 +488,7 @@ ul {
 
 */
 
+/* Container for form on contact page*/
 form {
     width: 40%;
     padding: 2em;
@@ -460,15 +496,17 @@ form {
     border-radius: 1em;
 }
 
+/* Spacing for input */
 .formInput {
     margin: 30px 0 0 10%;
 }
 
-
+/* Spacing */
 form div + div {
     margin-top: 1em;
 }
 
+/* Changes sizing of text area */
 input, textarea {
     width: 300px;
     padding: 20px;
@@ -478,17 +516,20 @@ input, textarea {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* Changes border of text areas */
 input:focus, textarea:focus {
     border: 1px solid #DC655C;
 }
 
+/* Font and alignment for textarea */
 textarea {
     vertical-align: top;
     height: 10em;
-    font-family: 'Mako', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
 
 }
 
+/* Changes what the submit button looks like */
 .submitButton {
     width: 200px;
     margin-left: 25%;
@@ -503,19 +544,23 @@ textarea {
 
 }
 
+/* When hovering, subtmit button changes */
 .submitButton:hover {
     text-decoration: underline;
     cursor: pointer;
     background-color: #DC655C;
 }
 
+/* Sizing of contact info next to form */
 #contactInfo {
     width: 60%;
 }
 
+/* Changes spacing of p tags of contact info */
 #contactInfo > p {
     margin: 2em 0 2em 20%;
 }
+
 /*
 
 
@@ -523,11 +568,14 @@ textarea {
 
 
 */
+
+/* Changes width of content*/
 #docContent {
     width: 75%;
     margin: 0 12.5%;
 }
 
+/* Removes indentation*/
 #docContent ul {
     text-indent: 0;
 }
@@ -535,10 +583,14 @@ textarea {
 /*
 
 
+
 SCREEN SIZING
 
 
+
 */
+
+/* Formats the content on the website for various different sizing of the screens */
 @media screen and (max-width: 1395px) {
     .aboutImg {
         padding: 2% 0;
