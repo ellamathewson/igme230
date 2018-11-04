@@ -81,9 +81,6 @@
 
     <script>
         onPage();
-        //loadProjects();
-
-        //let projectImages = document.getElementsByTagName("img");
 
         function loadProjects() {
             /* This line of code came from Darius Morawiec on Stack Overflow:
@@ -93,7 +90,6 @@
             let imgArray = [];
             for (let i = 0; i < images.Length; i++) {
                 imgArray.push(document.getElementsByTagName("img"));
-                //imgArray[i].style.opactiy = 1;
             }
         }
 
@@ -112,101 +108,3 @@
 </body>
 
 </html>
-
-<!--
-
-        /*
-        https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button
-        */
-
-        function filterProjects(buttonID) {
-            let buttonClicked = buttonID;
-
-            console.log(buttonClicked);
-
-            if (buttonClicked == "allLink") {
-                loopDisplay("countJS", "js");
-                loopDisplay("countDesign", "design");
-                loopDisplay("countHTML", "html");
-            }
-            else if (buttonClicked == "cSharpLink") {
-                loopHide("countJS", "js");
-                loopHide("countDesign", "design");
-                loopHide("countHTML", "html");
-            }
-            else if (buttonClicked == "designLink") {
-                loopHide("countJS", "js");
-                loopDisplay("countDesign", "design");
-                loopHide("countHTML", "html");
-            }
-            else if (buttonClicked == "htmlLink") {
-                loopHide("countJS", "js");
-                loopHide("countDesign", "design");
-                loopDisplay("countHTML", "html");
-            }
-            else if (buttonClicked == "jsLink") {
-                loopDisplay("countJS", "js");
-                loopHide("countDesign", "design");
-                loopHide("countHTML", "html");
-                }
-        }
-
-        function loopDisplay(className, projName) {
-            //gets all the elements with the same class
-            let sameClass = document.getElementsByClassName(className); 
-            //takes the value of how many elements there are of the class
-            for(let i = 1; i <= sameClass.length; i++) {
-                //sets a local variable equal to the name plus a value
-                //all ids of the projects have a numbered value to them
-                let idName = projName + i;
-                //sends it to displayProjects
-                displayProjects(idName);
-            }
-        }
-
-        function loopHide(className, projName) {
-            let sameClass = document.getElementsByClassName(className); 
-            for(let i = 1; i <= sameClass.length; i++) {
-                let idName = projName + i;
-                hideProjects(idName);
-            }
-        }
-
-        function displayProjects(projID) {
-            //changes the display of the div 
-            document.getElementById(projID).style.display = 'block';
-        }
-
-        function hideProjects(projID) {
-            document.getElementById(projID).style.display = 'none';
-        }
-
-
-        //function for toggling the dropdown menu on nav bar
-        function dropdown() {
-            document.getElementById("projDropdown").classList.toggle("show");
-        }
-
-        //when viewing the dropdown menu, if the user clicks off the page, the dropdown menu will hide
-        window.onclick = function (event) {
-            if (!event.target.matches('.navLink')) {
-                var dropdowns = document.getElementsByClassName("dropdownContent");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    let openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-
-
-document.getElementById("design1").style.display = 'block';
-                document.getElementById("design2").style.display = 'block'
-                document.getElementById("html1").style.display = 'none';
-                document.getElementById("js1").style.display = 'none';
-                document.getElementById("js2").style.display = 'none';
-
-
-                
--->
