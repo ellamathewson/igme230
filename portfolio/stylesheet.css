@@ -296,6 +296,11 @@ hr {
 
 
 */
+#resumeContainer {
+    width: 80%;
+    margin: 0 10%;
+}
+
 #resumeTopInfo {
     display: flex;
     flex-direction: row;
@@ -343,20 +348,49 @@ ul {
     .mainContent {
         font-size: 12pt;
         font-family: 'Times New Roman', Times, serif;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0;
+        padding: 0;
     }
-    h2 {
-        font-size: 24pt;
+    #resumeH2 {
+        color: blue;
+        font-size: 20pt;
+        margin: 0;
+        text-align: left;
+    }
+    #resumeContainer {
+        width: 100%;
+        margin: none;
+    }
+    #resumeContent p {
+        text-indent: 0.25cm;
+    }
+    ul {
+        text-indent: 0.5cm;
     }
     h4 {
         font-size: 14pt;
     }
+    #resumeTopInfo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .toProject, .toProject:visited {
+        color: black;
+    }
+    p a:after {
+        color: blue;
+        content: " (source:  https://ellamathewson.github.io/igme230/portfolio/index.html)";
+    }
 }
 
 @page {
-    margin: 0.5cm;
+    size: 8.5in 11in;
+    margin: 1.1cm;
 }
+
 
 /*
 
