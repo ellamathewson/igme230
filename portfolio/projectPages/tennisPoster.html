@@ -9,7 +9,7 @@
     <!-- This line of refrence I got from NathanG on Stack Overflow:
     https://stackoverflow.com/questions/24922833/fontawesome-icons-not-showing-why
     -->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <script src="https://use.fontawesome.com/ba6dad81c7.js"></script>
 
     <title>Ella Mathewson Portfolio</title>
 </head>
@@ -18,31 +18,49 @@
     <div class="mainContent">
 
         <nav>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" class="link" id="proj">Projects</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/index.html" id="logo">EM</a>
+            <div class="hiddenNav">
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="projects">Projects</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdown()" class="hamButton"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <div id="myDropdown" class="dropdownContent">
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Projects</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html">About</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html">Resume</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html">Contact</a>
+                </div>
+            </div>
         </nav>
 
         <h3 id="alumniHeader">Tennis Poster</h3>
 
         <div class="sideBySide" id="tennis">
-            <img id="vertical" src="projectImages/TennisClubPosterResize.png">
-            <p class="aboutPara">This poster was designed for RIT's Tennis Club.
+            <img id="vertical" src="projectImages/TennisClubPosterResize.png" alt="Tennis Club informational poster">
+            <p class="aboutPara">I designed this poster for RIT's Tennis Club. As vice president, my e-board and I recognized there needed 
+                to be more awareness on campus about our club in order to attract members. The poster needed to be eye catching and informational.
+                The design was kept simple in order to not overwhelm the viewer, and information was provided in order to contact us with 
+                any questions, which many people did. 
                 <br><br>
-                <a class="backToProjLink" href="https://google.com">Back to Projects</a>
+                <a class="backToProjLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html"><strong>Back to Projects</strong></a>
             </p>
         </div>
 
         <footer>
-            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
+            <p class="footerCursor"><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
             <p><a class="footerLink" href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
                     </i> ellamathewson</a></p>
             <p><a href="https://www.linkedin.com/in/ella-mathewson-7736a7154/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
                     Ella Mathewson</a></p>
         </footer>
     </div>
+
+    <script src="../javascript.js"></script>
+
 
 
 </body>

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <!-- This line of refrence I got from NathanG on Stack Overflow:
+    <!-- This line of refrence I got from Nathan G on Stack Overflow:
     https://stackoverflow.com/questions/24922833/fontawesome-icons-not-showing-why
     -->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <script src="https://use.fontawesome.com/ba6dad81c7.js"></script>
 
     <title>Ella Mathewson Portfolio</title>
 </head>
@@ -17,29 +17,91 @@
 <body>
     <div class="mainContent">
         <nav>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/home.html" class="link" id="logo">EM</a>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/index.html" id="logo">EM</a>
+            <div class="hiddenNav">
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="projects">Projects</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
+            </div>
+
             <div class="dropdown">
-                <!-- 
-                        Code based on this tutorial:
-                        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown 
-                    -->
-                <a class="navLink" onclick="dropdown()" id="proj">Projects</a>
-                <div class="dropdownContent" id="projDropdown">
-                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">All</a>
-                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">C#</a>
-                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Design</a>
-                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">HTML and CSS</a>
-                    <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">JavaScript</a>
+                <button onclick="dropdown()" class="hamButton"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <div id="myDropdown" class="dropdownContent">
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Projects</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html">About</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html">Resume</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html">Contact</a>
                 </div>
             </div>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" class="link" id="about">About</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" class="link" id="resume">Resume</a>
-            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" class="link" id="contact">Contact</a>
         </nav>
 
+    <div id="resumeContainer">
+        <h2 id="resumeH2">Ella Mathewson</h2>
+
+        <div id="resumeTopInfo">
+            <p class="resumeTop">(440) 654 - 3822</p>
+            <p class="resumeTop">137 Perkins Road Rochester, NY 14623</p>
+            <p class="resumeTop">exm1381@rit.edu</p>
+            <p class="resumeTop"><a class="toProject" href="https://ellamathewson.github.io/igme230/portfolio/index.html">
+            ellamathewson.github.io/igme230/portfolio/index.html</a></p>
+        </div>
+
+    <div id="resumeContent">
+        <h4>OBJECTIVE</h4>
+            <p>Seeking a web design and development co-op or paid internship in order to learn more about website design and 
+                development in a buisness setting. Available May 2019 - August 2019. 
+            </p>
+
+        <h4>EDUCATION</h4>
+            <p><strong>Rochester Institue of Technology (RIT) </strong>• Rochester, NY • Expected May 2021</p>
+            <ul>
+                <li>Bachelor of Science, New Media Intearctive Development</li>
+                <li>GPA: 3.9</li>
+            </ul>
+
+        <h4>EXPERIENCE</h4>
+            <p><strong>Teaching Assistant </strong>• Rochester Institute of Technology • Rochester, NY • August 2018 - Present</p>
+            <ul>
+                <li>Grade exercises and projects for two introductory JavaScript coding classes</li>
+                <li>Debug student's code and provide feedback of what the issue was and how to go about fixing it</li>
+            </ul>
+
+            <p><strong>Sales Floor Associate </strong>• Kohl's • Rocky River, OH • June 2018 - August 2018</p>
+            <ul>
+                <li>Provided excellent customer service to customers searching for products</li>
+                <li>Worked and communicated with a team to help customer's experience and keep the store neat</li>
+            </ul>
+
+        <h4>PROJECTS</h4>
+            <p><strong>Boogie Worms</strong>, Personal Project • May 2018 - August 2018</p>
+            <ul>
+                <li>Designed and developed a simple web game using HTML, CSS, and JavaScript</li>
+                <li>Learend how to use JavaScript libraries such as p5.sound, p5.collide, and p5.dom</li>
+            </ul>
+
+            <p><strong>Portfolio Website</strong>, Individual School Project • October 2018 - November 2018</p>
+            <ul>
+                <li>Designed and coded a website to showcase personal and school projects using HTML, CSS, and JavaScript</li>
+                <li>Implemented dropdown menus, printable pages using CSS, and responsive web design</li>
+            </ul>
+
+        <h4>SKILLS</h4>
+            <p><strong>Programming Languages:</strong> HTML, JavaScript, CSS, C#, Git</p>
+            <p><strong>Software:</strong> Adobe Illustrator, InDesign, Photoship, FileZilla, GitHub</p>
+
+        <h4>LEADERSHIP</h4>
+            <p><strong>Momentum </strong>• Rochester, NY • March 2018 - Present</p>
+            <ul>
+                <li>Organization focused on enhancing volunteer work and leadership training</li>
+                <li>Lead volunteers during the Framing Frenzy on RIT's campus with Habitat for Humanity in Spring 2018</li>
+            </ul>
+
+        </div>
+    </div>
 
         <footer>
-            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
+            <p class="footerCursor"><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
             <p><a class="footerLink" href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
                     </i> ellamathewson</a></p>
             <p><a href="https://www.linkedin.com/in/ella-mathewson-7736a7154/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
@@ -58,7 +120,7 @@
 
         </script>
 
-        <script type="text/javascript" src="javascript.js"></script>
+        <script src="javascript.js"></script>
 
 
     </div>

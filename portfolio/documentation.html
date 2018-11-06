@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- This line of refrence I got from Nathan G on Stack Overflow:
+    https://stackoverflow.com/questions/24922833/fontawesome-icons-not-showing-why
+    -->
+    <script src="https://use.fontawesome.com/ba6dad81c7.js"></script>
+
+    <title>Ella Mathewson Portfolio</title>
+</head>
+
+<body>
+    <div class="mainContent">
+        <nav>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/index.html" id="logo">EM</a>
+            <div class="hiddenNav">
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="projects">Projects</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdown()" class="hamButton"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <div id="myDropdown" class="dropdownContent">
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Projects</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html">About</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html">Resume</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+    <div id="docContent">
+        <h2>Documentation</h2>
+
+        <h4>Refrences:</h4>
+        <a class="toSource" href="https://stackoverflow.com/questions/24922833/fontawesome-icons-not-showing-why">
+            https://stackoverflow.com/questions/24922833/fontawesome-icons-not-showing-why</a>
+            <ul>
+                <li>Nathan G provided the link to Font Awesome that I used at the head of each page. I was having an issue where the icons 
+                were not displaying once uploaded to GitHub, and his line of code answered it for me. I was using href when I 
+                should have been using src. </li>
+            </ul>
+        <a class="toSource" href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click">
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click</a>
+        <a class="toSource" href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_responsive_navbar_dropdown">
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_responsive_navbar_dropdown</a>
+            <ul>
+                <li>These two sources were the basis of the code for my dropdown menu. The first link showed me how to create 
+                a dropdown menu, while the second link showed me how to have it appear when the screen size changes. </li>
+            </ul>
+        <a class="toSource" href="https://www.w3schools.com/css/css3_shadows.asp">
+            https://www.w3schools.com/css/css3_shadows.asp</a>
+            <ul>
+                <li>I used this source for a specific box-shadow line of CSS, which is used for the nav bar across every page.
+                I liked the shadow effect it had. </li>
+            </ul>
+        <a class="toSource" href="https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag">
+            https://stackoverflow.com/questions/17833678/count-number-of-img-tags-inside-a-div-tag</a>
+            <ul>
+                <li>The code from this source comes from Darius Morawiec, who explained how to count the number of 
+                elements inside a specific div. I used this line of JavaScript for the nav bar on the projects 
+                page, which sorts the projects based on the type of project. </li>
+            </ul>
+        <a class="toSource" href="https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button">
+            https://stackoverflow.com/questions/4825295/javascript-onclick-to-get-the-id-of-the-clicked-button</a>
+            <ul>
+                <li>This source also helped with creating the nav bar on the projects page. When a link is pressed on, 
+                this code showed me how to have JavaScript grab the id of the link. I used this to get the id and 
+                use it as a parameter in the function to sort the projects. </li>
+            </ul>
+        <a class="toSource" href="https://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/#top">
+            https://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/#top</a>
+            <ul>
+                <li>This source went through how to create a printable page with CSS. I used it with the resume page 
+                so employers can print it with ease. </li>
+            </ul>
+        <a class="toSource" href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder">
+            https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder</a>
+            <ul>
+                <li>From this source I learned how to add placeholders inside text divs so the forms have the labels 
+                of which box is which inside the text box. When the user clicks on them and types in their answer, 
+                the label goes away. </li>
+            </ul>
+        <a class="toSource" href="https://fonts.google.com/specimen/Nanum+Gothic">
+            https://fonts.google.com/specimen/Nanum+Gothic</a>
+            <ul>
+                <li>This is the font used throughout this site</li>
+            </ul>
+        <p>Font Awesome icons: </p>
+        <ul>
+            <li><a class="toSource" href="https://fontawesome.com/v4.7.0/icon/envelope-o">Email</a></li>
+            <li><a class="toSource" href="https://fontawesome.com/v4.7.0/icon/github">GitHub</a></li>
+            <li><a class="toSource" href="https://fontawesome.com/v4.7.0/icon/linkedin-square">LinkedIn</a></li>
+            <li><a class="toSource" href="https://fontawesome.com/v4.7.0/icon/home">House</a></li>
+            <li><a class="toSource" href="https://fontawesome.com/v4.7.0/icon/phone">Phone</a></li>
+        </ul>
+
+        <h4>Challenges: </h4>
+        <p><strong>Project Nav Bar</strong></p>
+        <ul>
+            <li>This aspect to my website was particularly challenging. The nav bar on the projects page has the 
+            ability to sort the projects based on what the project is. I divided it into four main groups: 
+            JavaScript, HTML and CSS, Design, and C#. I ended up removing the C# category because as of right 
+            now I do not have any C# projects completed. 
+            </li>
+
+            <li>Using JavaScript, when the link is pressed, I needed certain projects to disappear from the page 
+            and certain ones to stay. This was challenging because I needed to get the id of every project and 
+            look for specific ones. I also needed to know how to obtain the correct number of projects that 
+            were on the page. </li>
+        </ul>
+        <p><strong>Responsiveness</strong></p>
+        <ul>
+            <li>This aspect was challenging in a different way. It was challenging to try and rework all of my 
+            pages for a different window size, as a lot of aspects needed to be changed in order for the 
+            content to look right. </li>
+        </ul>
+    </div>
+        <footer>
+            <p class="footerCursor"><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
+            <p><a class="footerLink" href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
+                    </i> ellamathewson</a></p>
+            <p><a href="https://www.linkedin.com/in/ella-mathewson-7736a7154/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    Ella Mathewson</a></p>
+        </footer>
+
+        <script src="javascript.js"></script>
+
+    </div>
+</body>
+
+</html>
