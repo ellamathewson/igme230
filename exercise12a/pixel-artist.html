@@ -140,18 +140,18 @@
         });
 
         //adds ability to click on a cell to change the color
-        $("span").click(function () {
+        $(".cell").click(function () {
             $(this).css("background-color", color);
         });
 
         //adding dragability to program
-        $("span").mousedown(function () {
+        $(".cell").mousedown(function () {
             //added to stop default behavior
             event.preventDefault();
             //refers to the cell the user first clicked on
             $(this).css("background-color", color);
             //changes color of every cell passed over
-            $("span").mouseover(function () {
+            $(".cell").mouseover(function () {
                 //refers to each cell mouse passes over
                 $(this).css("background-color", color);
             });
@@ -159,7 +159,7 @@
 
         //unbinds the method no matter where on the page the mouse button is lifted
         $(document).mouseup(function () {
-            $("span").unbind("mouseover");
+            $(".cell").unbind("mouseover");
         });
 
         //adds ability to click on a cell to change the color
@@ -167,7 +167,7 @@
             //loops through every cell on the page
             for (let i = 0; i < numCells; i++) {
                 //changes color of every cell back to the original color
-                $("span").css("background-color", "#ccc");
+                $(".cell").css("background-color", "#ccc");
             }
         });
 
@@ -176,7 +176,7 @@
             //loops through every cell on the page
             for (let i = 0; i < numCells; i++) {
                 //changes color of every cell back to the original color
-                $("span").css("background-color", color);
+                $(".cell").css("background-color", color);
             }
         });
 
