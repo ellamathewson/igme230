@@ -13,7 +13,7 @@
 
 <body>
     <nav>
-        <div id="toggleBar"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div id="toggleButton"><i class="fa fa-bars" aria-hidden="true"></i></div>
         <div id="menuContent">
             <ul>
                 <li><span class="submenu">History</span></li>
@@ -50,7 +50,7 @@
     </p>
 
     <script>
-        $("#toggleBar").click(function () {
+        $("#toggleButton").click(function () {
             $("#menuContent").slideToggle(1500);
         });
 
@@ -96,6 +96,10 @@
         h1 {
             font-size: 30px;
             color: darkblue;
+        }
+
+        #toggleButton {
+            margin: 20px 0 0 20px;
         }
     </style>
 </body>
