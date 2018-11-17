@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Interactivity Exercise</title>
 </head>
+
 <body>
-    
+    <nav>
+        <div id="toggleBar"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div id="menuContent">
+            <ul>
+                <li><span class="submenu">History</span></li>
+                <ul class="submenuContent">
+                    <li>The Beginning</li>
+                    <li>The Middle</li>
+                    <li>The End</li>
+                </ul>
+                <li>Life on the Ocean</li>
+                <li>Trouble and Misfortune</li>
+                <li><span class="submenu">The Greatest</span></li>
+                <ul class="submenuContent">
+                    <li>Blackbeard</li>
+                    <li>Anne Bonny</li>
+                    <li>Mary Read</li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Pirates!</h1>
+
+    <p>
+        Cat o'nine tails jolly boat weigh anchor lookout ho Jolly Roger Plate Fleet draft sloop Sea Legs. Pillage loaded to the gunwalls
+        crimp lugger sloop fore square-rigged crow's nest aye driver. League clipper skysail Jolly Roger Buccaneer mutiny
+        scuttle yardarm hands carouser. Tender rigging shrouds me careen nipper prow furl yardarm hands. Square-rigged belay
+        wench boom doubloon rigging six pounders gun parley blow the man down. Spanker Jolly Roger Admiral of the Black coffer
+        barque topmast port coxswain chandler gangway.
+    </p>
+    <p>
+        Scourge of the seven seas Nelsons folly jolly boat draft heave down maroon chandler gibbet spirits. Jury mast jolly boat
+        keelhaul hulk spyglass landlubber or just lubber yawl broadside spanker wherry. Jolly boat fathom wherry scuttle
+        stern Pirate Round nipper Letter of Marque jack warp.
+    </p>
+
+    <script>
+        $("#toggleBar").click(function () {
+            $("#menuContent").slideToggle(1500);
+        });
+
+        $(".submenu").click(function () {
+            $(".submenuContent").slideToggle(1500);
+        });
+    </script>
+
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+
+        ul, li {
+            list-style: none;
+            text-indent: -25px;
+        }
+
+        #menuContent {
+            display: none;
+            height: 250px;
+            width: 200px;
+            border: 1px solid green;
+            background-color: lightblue;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .submenuContent {
+            display: none;
+        }
+
+        .submenu {
+            color: green;
+        }      
+
+        p, h1 {
+            width: 90%;
+            margin: 0 5% 5% 5%;
+        }  
+
+        h1 {
+            font-size: 30px;
+            color: darkblue;
+        }
+    </style>
 </body>
+
 </html>
