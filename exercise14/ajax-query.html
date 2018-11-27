@@ -77,6 +77,36 @@
     </div>
     <script>
         'use strict';
+
+        let verseChoose = document.querySelector('select'); //holds select menu
+        let poemDisplay = document.querySelector('#selectedverse'); //holds div on page where poem will be put
+        let verse  = "verse1-2.txt"; //default verse on page
+
+        //tells browser how to go about finding and using external file
+        //passes in current value of verse
+        function updateVerse(verse) {
+            //AJAX component used below
+            let verseRequest = new XMLHttpRequest(); //creates request, this is what it is called
+            //specific characteristics of request, what it should do when sent
+            verseRequest.open('GET', verse); //'GET' = retrieve using standard HTTP request, finds file name and opens it
+            verseRequest.responseType = 'text'; //specifies that the files should be treated as texts
+            verseRequest.onload = function() {
+                //when file is loaded in request (not document),
+                poemDisplay.innerHTML = verseRequest.response; //place text file in selected element, change inner HTML
+            };
+            verseRequest.send(); //sends the request after document is fully loaded
+        }
+        
+        //gets value of current element
+        verseChoose.onchange = function() {
+            verse = verseChoose.value;
+            //sents current value to function
+            updateVerse(verse);
+        };
+
+        //initalize value of the select form
+        verseChoose.value = verse; //shows initial menu option
+        updateVerse(verse); //shows intial content
         
     </script>
 </body>
