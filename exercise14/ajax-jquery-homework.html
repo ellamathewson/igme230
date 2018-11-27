@@ -97,6 +97,7 @@
 
         $("#verse-choose").change(function() {
             verse = $(this).val();
+            verseString = `${poem} #${verse}`;
             $("#selectedverse").load(verseString);
             console.log(verse);
             console.log(verseString);
