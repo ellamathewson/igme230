@@ -66,9 +66,12 @@
         <form>
             <label for="verse-choose">Choose a verse</label>
             <select id="verse-choose" name="verse-choose">
-                <option value="verse1-2.txt">Verse 1-2</option>
-                <option value="verse3-4.txt">Verse 3-4</option>
-                <option value="verse5-6.txt">Verse 5-6</option>
+                <option value="verse1">Verse 1</option>
+                <option value="verse2">Verse 2</option>
+                <option value="verse3">Verse 3</option>
+                <option value="verse4">Verse 4</option>
+                <option value="verse5">Verse 5</option>
+                <option value="verse6">Verse 6</option>
             </select>
         </form>
 
@@ -80,11 +83,15 @@
     </div>
     <script>
         'use strict';
+        
+        let poem = "poem.txt";
 
-        let verse = ("verse1-2.txt"); //sets default verse element
+        let verse = ("verse1"); //sets default verse element
+        let verseString = `${poem} #${verse}`;
+
         $("#verse-choose").val(verse); //changes menu option to default
         //can take a file name, can also specify one element in file using ids
-        $("#selectedverse").load(verse); //retrieves only dafault element
+        $("#selectedverse").load(verseString); //retrieves only dafault element
 
         $("#verse-choose").change(function() {
             verse = $(this).val();
