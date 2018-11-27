@@ -88,6 +88,8 @@
 
         let verse = ("verse1"); //sets default verse element
         let verseString = `${poem} #${verse}`;
+        console.log(verse);
+        console.log(verseString);
 
         $("#verse-choose").val(verse); //changes menu option to default
         //can take a file name, can also specify one element in file using ids
@@ -95,7 +97,9 @@
 
         $("#verse-choose").change(function() {
             verse = $(this).val();
-            $("#selectedverse").load(verse);
+            $("#selectedverse").load(verseString);
+            console.log(verse);
+            console.log(verseString);
         });
         
     </script>
