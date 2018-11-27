@@ -83,6 +83,7 @@
 
         let verse = ("verse1-2.txt"); //sets default verse element
         $("#verse-choose").val(verse); //changes menu option to default
+        //can take a file name, can also specify one element in file using ids
         $("#selectedverse").load(verse); //retrieves only dafault element
 
         $("#verse-choose").change(function() {
