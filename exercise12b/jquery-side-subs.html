@@ -108,7 +108,40 @@
 
         $(".submenu").click(function() {
             $(this).next(".submenu-panel").toggle();
-        });
+        });        
+
+        /* function expandAll() {
+            $('i.fa-angle-left').toggleClass('fa-angle-left fa-angle-down);
+            $('.panel').show();
+
+            function collapseAll() {
+                //collapse me into a piece of dust and yeet me into the atmosphere
+            }
+
+            function checkWidth() {
+                if(window.innerWidth >= 801) {
+                    expandAll();
+                } else {
+                    collapseAll();
+                }
+            }
+
+            $('#expandAll').click(expandAll);
+
+            //toggle icon and panel when clicking on individual subhead
+            $('.subhead').click(function() {
+                $(this).find("i").toggleClass('fa-angle-left fa-angle-down');
+                //don't need to put selecter in next because theyre always going to be next to each other
+                $(this).next().toggle();
+            })
+            
+            //for every text area on page, figure out scroll height, and set element height to that
+            //now none of them need to be scrollable
+            
+            $("textarea").each(function () {
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+        */
 
     </script>
 
