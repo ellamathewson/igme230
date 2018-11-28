@@ -11,3 +11,21 @@ To get me wondering if the dinner is delicious.<br></p>
 I cannot help but stop and look at the yellow brunch.<br>
 Does the brunch make you shiver?<br>
 does it?<br> </p>
+
+<p id="verse4">
+How happy are eggy omelettes! <br>
+Do omelettes make you shiver? <br>
+do they? <br> </p>
+
+<p id="verse5">
+A dessert, however hard it tries, <br>
+Will always be yummy. <br>
+Are you upset by how luscious it is? <br>
+Does it tear you apart to see the dessert so toothsome? <br>
+ </p>
+
+<p id="verse6">
+Just like a love, is the dinner. <br>
+Now dumpy is just the thing, <br>
+To get me wondering if the dinner is heavyset. <br>
+</p>
