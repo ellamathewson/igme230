@@ -1,0 +1,13 @@
+<p id="verse1">A dessert, however hard it tries, <br>
+Will always be tasty. <br>
+Does the dessert make you shiver? <br>
+does it?<br></p>
+
+<p id="verse2">How happy is the yummy dinner! <br>
+Now luscious is just the thing, <br>
+To get me wondering if the dinner is delicious.<br></p>
+
+<p id="verse3">
+I cannot help but stop and look at the yellow brunch.<br>
+Does the brunch make you shiver?<br>
+does it?<br> </p>
