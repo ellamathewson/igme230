@@ -38,3 +38,31 @@ nav, aside {
 Your Formatting
 ***************/
 
+#wrapper {
+    display: grid;
+    width: 90vw;
+    max-width: 1200px;
+    min-height: 100vh;
+    border: 1px solid black;
+    grid-template-rows: 4rem 1fr 3rem;
+    grid-template-columns: 1fr 1fr 200px;
+}
+
+header {
+    grid-column: 1 / span 3;
+}
+
+.menubox {
+    grid-column: 2 / -2;
+}
+
+footer {
+    grid-column: 1 / span 3;
+}
+
+@media screen and (min-width: 760px){
+    #wrapper {
+        width: 100vw;
+        grid-template-columns: 1fr;
+    }
+}
