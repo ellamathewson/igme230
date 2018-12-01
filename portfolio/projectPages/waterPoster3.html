@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <!-- This line of refrence I got from NathanG on Stack Overflow:
+    https://stackoverflow.com/questions/24922833/fontawesome-icons-not-showing-why
+    -->
+    <script src="https://use.fontawesome.com/ba6dad81c7.js"></script>
+
+    <title>Ella Mathewson Portfolio</title>
+</head>
+
+<body>
+    <div class="mainContent">
+
+        <nav>
+            <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/index.html" id="logo">EM</a>
+            <div class="hiddenNav">
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html" id="projects">Projects</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html" id="about">About</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html" id="resume">Resume</a>
+                <a class="navLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html" id="contact">Contact</a>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdown()" class="hamButton"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <div id="myDropdown" class="dropdownContent">
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html">Projects</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/about.html">About</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/resume.html">Resume</a>
+                    <a class="dropLink" href="https://ellamathewson.github.io/igme230/portfolio/contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <h3>Social Awareness Poster: Water Foutain</h3>
+
+        <div class="sideBySide" id="waterPoster">
+            <img class="vertical" src="projectImages/waterFoutain.png" alt="A water foutain at school">
+            <p class="aboutPara" id="waterPara">This poster is the third one about the lack of access to clean water. The point of this project
+                    was to create polarized explorations of an enviornmental or social issue and call people to 
+                    donate or learn more about said issue. 
+                <br><br> This poster shows a water foutain with the stream of water spelling out 443,000,000 days. 
+                This is the number of school days that are missed due to water-related illnesses in children. The design
+                was inspired by this fact, as the water foutain is meant to represent one you would see in schools that 
+                children drink from. 
+                <br><br>
+                <a class="backToProjLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html"><strong>Back
+                        to Projects</strong></a>
+            </p>
+        </div>
+
+        <footer>
+            <p class="footerCursor"><i class="fa fa-envelope-o" aria-hidden="true"></i> exm1381@rit.edu</p>
+            <p><a class="footerLink" href="https://github.com/ellamathewson"><i class="fa fa-github" aria-hidden="true">
+                    </i> ellamathewson</a></p>
+            <p><a href="https://www.linkedin.com/in/ella-mathewson-7736a7154/"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    Ella Mathewson</a></p>
+        </footer>
+    </div>
+
+    <script src="../javascript.js"></script>
+
+
+
+</body>
+
+</html>
