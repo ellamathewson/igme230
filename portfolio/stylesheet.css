@@ -466,16 +466,25 @@ ul {
 }
 
 /* Used for images that are vertical on the page (alumni poster) */
-#vertical {
+.vertical {
     margin-right: 5%;
-    width: 70%;
-    height: 70%;
+    width: 55%;
+    height: 55%;
 }
 
 /* Spacing specificially for alumni page */
 #alumni {
     width: 85%;
     margin-left: 7.5%;
+}
+
+#waterPoster {
+    width: 85%;
+    margin-left: 7.5%;
+}
+
+#waterPara {
+    margin-top: -5%;
 }
 
 /* Used for images that are wider on the page (boogie worms, wearable devices) */
