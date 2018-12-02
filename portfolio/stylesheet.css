@@ -272,6 +272,7 @@ hr {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* links in project nav, for spacing */
