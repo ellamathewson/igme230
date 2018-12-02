@@ -314,6 +314,20 @@ hr {
     display: block;
 }
 
+/* If opened in Microsoft Edge, re-aligns project grid*/
+
+@supports (-ms-ime-align:auto) {
+    .projectsGrid {
+        /* space-around is a work around Microsoft edge not supporting flexbox. 
+        Solution from James C. on Microsoft Edge Forum: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15947692/ */
+        margin-left: 5%;
+        justify-content: space-around;
+    }
+    .projImg {
+        padding: 50px 50px;
+    }
+}
+
 /* 
 
 
