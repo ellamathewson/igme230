@@ -301,11 +301,12 @@ hr {
     width: 300px;
     margin: 2% 2%;
     padding: 20px 20px;
+    transition: all .2s ease-in-out;
 }
 
 /* Suddle growing for hovering over images on projects page*/
 .projImg:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* Classes call specific projects, used for the project nav bar when sorting them */
