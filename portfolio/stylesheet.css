@@ -299,7 +299,7 @@ hr {
 .projImg {
     width: 300px;
     margin: 2% 2%;
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 /* Suddle growing for hovering over images on projects page*/
