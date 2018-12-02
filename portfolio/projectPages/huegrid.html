@@ -49,17 +49,25 @@
             </div>
         </nav>
 
-        <h3 id="alumniHeader">Boogie Worms</h3>
+        <h3 id="alumniHeader">Hue Grids</h3>
 
-        <a href="https://ellamathewson.github.io/portfolio/CDE_2_boogieWorms/boogieWorms/index.html" target="_blank">
-            <img class="wideImg" src="projectImages/boogieWorms.png" alt="A picture of the Boogie Worms opening screen"></a>
-        <p class="underneathPara">I worked on this game as my summer project of 2018. It consists of a combination of the
-            old code I learned in my first year at RIT and new code I taught myuself with the help of online refrences. The
-            game itself is focused on using the cursor to catch the "boogie worms" on the screen. Every five rounds, an element
-            of the game changes to increase the difficulty, such as mouse size, worm speed, worm location, etc.
-            <br><br> There are some glitches in the game I hope to fix. I also hope to add new levels, as well as include
-            a timer visable on the screen.
-            <br><br> Click on the image above to play the game!
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <p class="underneathPara">This interactive program displays a layout of hue grids that are changed by using genetic algorithms. 
+            To enact any of the features, hover over a grid and press the plus key if you like it, or the minus key if you do not. 
+            Then the genetic algorithms, as described below, can function properly.
+            <br><br> 
+            The crossover button takes 2 random grids and crosses them over together, displaying the child in the first grid location. 
+            Mutate changes the first grid randomly. Select takes two random grids, compares their fitness values (how much you like or 
+            dislike the grid, based upon how many times the plus or minus key are pressed), and returns the grid with the higher value.
+            <br><br>
+            Breed1 selects two parents, does a crossover between them to create a child grid, and then mutates the grid, returning the 
+            grid to the first position. Breed Generation goes through all the grids to find the grid with the highest fitness value, and 
+            resets that one in the first position, as well as breeds a new generation of grids with similar attributes to the ones with 
+            higher fitness values.
+            <br><br>
+            Options that are manually changed are max deviation (how fast the boxes flash), brightness, and reset, 
+            which resets the grid of hueGrids.
             <br><br>
             <a class="backToProjLink" href="https://ellamathewson.github.io/igme230/portfolio/projects.html"><strong>Back to Projects</strong></a>
         </p>
