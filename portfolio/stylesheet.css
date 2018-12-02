@@ -493,6 +493,10 @@ ul {
     margin-left: 30%;
 }
 
+#defaultCanvas0 {
+    position: relative;
+}
+
 /*
 
 
@@ -520,7 +524,7 @@ form div + div {
 }
 
 /* Changes sizing of text area */
-input, textarea {
+.contactInput, textarea {
     width: 300px;
     padding: 20px;
     box-sizing: border-box;
@@ -530,7 +534,7 @@ input, textarea {
 }
 
 /* Changes border of text areas */
-input:focus, textarea:focus {
+.contactInput:focus, textarea:focus {
     border: 1px solid #DC655C;
 }
 
