@@ -5,5 +5,10 @@ $(".menuitem").click(function() {
 });
 
 let name = ("content1.txt");
-//$("#content").val(name);
+$("#choose-content").val(name);
 $("#content").load(name);
+
+$("#choose-content").change(function() {
+    name = $(this).val();
+    $("#content").load(name);
+})
