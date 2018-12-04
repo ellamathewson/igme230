@@ -4,11 +4,12 @@ $(".menuitem").click(function() {
     $(".submenu").slideToggle();
 });
 
+
 let name = ("content1.txt");
-$("#content-menu").val(name);
+$("#choose-content").val(name);
 $("#content").load(name);
 
-$("#content-menu").change(function() {
+$("#choose-content").change(function() {
     name = $(this).val();
     $("#content").load(name);
-})
+});
