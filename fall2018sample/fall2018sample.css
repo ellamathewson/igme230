@@ -45,6 +45,8 @@ Your Formatting
     width: 100vw;
     /* Uses all of the horizontal space */
     height: 100vh;
+    /* Rows automatically generated*/
+    grid-template-rows: auto;
     /* Order of elements in row */
     grid-template-areas: "header" "sidenav" "article" "sidebar" "footer";
 }
