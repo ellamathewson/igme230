@@ -3,3 +3,6 @@
 $(".menuitem").click(function() {
     $(".submenu").slideToggle();
 });
+
+let name = ("content1.txt");
+$("#content").val(name);
