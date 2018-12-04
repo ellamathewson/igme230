@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mygrid">
+        <header>
+            <h1>Title here</h1>
+        </header>
+
+        <article>
+            <h2>Main content here</h2>
+            <p>some text</p>
+        </article>
+
+        <aside>
+            <h2>Sidebar content here</h2>
+            <p>More text here...</p>
+        </aside>
+        
+        <nav>
+            <h2>nav</h2>
+        </nav>
+
+        <footer>
+            <h2>Foot</h2>
+        </footer>
+    </div>
+
+    <style>
+    #mygrid {
+        display: grid;
+        grid-template-rows: 75px 1fr 50px;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "a a a" "d b c" "e e e"
+    }
+
+    header {
+        /* spans across the width of grid
+        grid-column: 1 / -1;
+        takes up one grid
+        grid-row: 1 / 2; */
+        background-color: lightpink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        grid-area: a;
+    }
+
+    article {
+        /* grid-column: 2/3;
+        grid-row: 2/3; */
+        background-color: lightblue;
+
+        grid-area: b;
+    }
+
+    aside {
+        /* grid-column: 3/4;
+        grid-row: 2/3; */
+        background-color: lightgoldenrodyellow;
+
+        grid-area: c;
+    }
+
+    nav {
+        /* grid-column: 1/2;
+        grid-row: 2/3; */
+        background-color: lightgreen;
+
+        grid-area: d;
+    }
+
+    footer {
+        /* grid-column: 1/-1;
+        grid-row: 3/4; */
+        background-color: lightsalmon;
+
+        grid-area: e;
+    }
+
+    @media screen and (max-width: 600px) {
+        #mygrid {
+            grid-template-columns: 1fr;
+            grid-template-areas: "a" "d" "b" "c" "e";
+        }
+        
+        
+    }
+    </style>
+</body>
+</html>
