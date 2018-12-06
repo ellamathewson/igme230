@@ -1,4 +1,6 @@
+//when mainmenu is clicked
 $(".mainmenu").click(function() {
+    //grabs next submenu class and slides toggle
     $(this).next(".submenu").slideToggle();
 });
 
@@ -20,10 +22,13 @@ $('input[name="content"]').on('change', function(){
     }
 });
 
-
+//local variable for counting the times clicked
 let numClick = 0;
 
+//when the button is clicked,
 document.getElementById('clickme').onclick = function() {
+    //variable goes up by one
     numClick += 1;
+    //changes html to display this
     document.getElementById('count').innerHTML = numClick;
 }

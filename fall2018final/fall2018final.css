@@ -35,6 +35,7 @@ aside {
 Your Formatting
 ***************/
 #yourgrid {
+    /* mobile grid layout */
     display: grid;
     width: 100%;
     height: 100vh;
@@ -47,6 +48,7 @@ Your Formatting
 header {
     grid-area: header;
     background-color: lightpink;
+    /* Centers on page */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,6 +57,8 @@ header {
 nav {
     grid-area: nav;
     background-color: lavenderblush;
+
+    /* centers on page */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -96,6 +100,7 @@ aside {
 #extracredit {
     grid-area: extracredit;
     background-color: lightblue;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,10 +111,13 @@ aside {
 
 footer {
     grid-area: footer;
+    background-color: lightpink;
+
+    /* Centers on page */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightpink;
+    
 }
 
 #count {
@@ -117,6 +125,7 @@ footer {
 }
 
 @media screen and (min-width: 760px) {
+    /* Desktop grid layout */
     #yourgrid {
         width: 90vw;
         max-width: 1000px;
