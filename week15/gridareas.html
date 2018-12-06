@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>Document</title>
 </head>
+
 <body>
     <div id="mygrid">
         <header>
@@ -21,77 +26,111 @@
             <h2>Sidebar content here</h2>
             <p>More text here...</p>
         </aside>
-        
+
         <nav>
-            <h2>nav</h2>
+            <h2 class="menubox">nav</h2>
+            <ul class="submenu">
+                <li>nav item</li>
+                <li>nav item 2</li>
+            </ul>
+
+
         </nav>
 
         <footer>
             <h2>Foot</h2>
         </footer>
+
+        <div id="logo">
+            <h2>yeet</h2>
+        </div>
     </div>
 
     <style>
-    #mygrid {
-        display: grid;
-        grid-template-rows: 75px 1fr 50px;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-areas: "a a a" "d b c" "e e e"
-    }
+        #mygrid {
+            display: grid;
+            grid-template-rows: 75px 1fr 50px;
+            grid-template-columns: 1fr 2fr 1fr;
+            /* dot - nothing in grid goes in there */
+            grid-template-areas: "a a a" "d b c" "e e e"
+        }
 
-    header {
-        /* spans across the width of grid
+        header {
+            /* spans across the width of grid
         grid-column: 1 / -1;
         takes up one grid
         grid-row: 1 / 2; */
-        background-color: lightpink;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            background-color: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        grid-area: a;
-    }
-
-    article {
-        /* grid-column: 2/3;
-        grid-row: 2/3; */
-        background-color: lightblue;
-
-        grid-area: b;
-    }
-
-    aside {
-        /* grid-column: 3/4;
-        grid-row: 2/3; */
-        background-color: lightgoldenrodyellow;
-
-        grid-area: c;
-    }
-
-    nav {
-        /* grid-column: 1/2;
-        grid-row: 2/3; */
-        background-color: lightgreen;
-
-        grid-area: d;
-    }
-
-    footer {
-        /* grid-column: 1/-1;
-        grid-row: 3/4; */
-        background-color: lightsalmon;
-
-        grid-area: e;
-    }
-
-    @media screen and (max-width: 600px) {
-        #mygrid {
-            grid-template-columns: 1fr;
-            grid-template-areas: "a" "d" "b" "c" "e";
+            grid-area: a;
         }
-        
-        
-    }
+
+        article {
+            /* grid-column: 2/3;
+        grid-row: 2/3; */
+            background-color: lightblue;
+
+            grid-area: b;
+        }
+
+        aside {
+            /* grid-column: 3/4;
+        grid-row: 2/3; */
+            background-color: lightgoldenrodyellow;
+
+            grid-area: c;
+        }
+
+        nav {
+            /* grid-column: 1/2;
+        grid-row: 2/3; */
+            background-color: lightgreen;
+
+            grid-area: d;
+        }
+
+        p {
+            display: none;
+        }
+
+        footer {
+            /* grid-column: 1/-1;
+        grid-row: 3/4; */
+            background-color: lightsalmon;
+
+            grid-area: e;
+        }
+
+        #logo {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            #mygrid {
+                grid-template-columns: 1fr;
+                grid-template-areas: "a" "d" "b" "c" "e";
+            }
+
+            #logo {
+                display: none;
+            }
+
+        }
     </style>
+
+    <script>
+        $(".menubox").click(function() {
+            $(this).next(".submenu").slideToggle();
+            console.log("fhea");
+        });
+    </script>
 </body>
+
 </html>
