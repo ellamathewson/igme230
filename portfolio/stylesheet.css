@@ -25,6 +25,7 @@ nav {
 a {
     text-decoration: none;
     font-size: 16px;
+    color: black;
 }
 /* Sets the color of links if they have already been clicked on */
 a:visited {
@@ -492,6 +493,11 @@ ul {
 #alumni {
     width: 85%;
     margin-left: 7.5%;
+}
+
+#wideImg {
+    width: 100%;
+    height: auto;
 }
 
 #waterPoster {
